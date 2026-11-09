@@ -11,13 +11,16 @@
     wrap: $(".table-wrap"),
     view: $("[data-view]"),
     search: $("[data-search]"),
+    more: $("[data-more]"),
     empty: $("[data-empty]"),
     error: $("[data-error]"),
   };
 
   const DEFAULT_REPO = "buda-base/YigzinBench";
-  const state = { view: "overall", training: "all", q: "", sort: "mean_cer", dir: 1 };
+  const TOP_N = 10;
+  const state = { view: "overall", training: "all", q: "", sort: "mean_cer", dir: 1, all: false };
   let board = null;
+  let issueUrl = `https://github.com/${DEFAULT_REPO}/issues/new?template=submission.yml`;
 
   // ---------- URL state ----------
   function readUrl() {
@@ -27,6 +30,7 @@
     state.q = p.get("q") || "";
     state.sort = p.get("sort") || "mean_cer";
     state.dir = p.get("dir") === "desc" ? -1 : 1;
+    state.all = p.get("all") === "1";
   }
   function writeUrl() {
     const p = new URLSearchParams();
@@ -35,8 +39,9 @@
     if (state.q) p.set("q", state.q);
     if (state.sort !== "mean_cer") p.set("sort", state.sort);
     if (state.dir === -1) p.set("dir", "desc");
+    if (state.all) p.set("all", "1");
     const qs = p.toString();
-    history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
+    history.replaceState(null, "", (qs ? `?${qs}` : location.pathname) + location.hash);
   }
 
   // ---------- helpers ----------
@@ -53,30 +58,24 @@
     for (const c of children) if (c !== null && c !== undefined) node.append(c);
     return node;
   }
-  function link(href, text) {
-    const url = safeUrl(href);
-    return url ? el("a", { href: url, rel: "noopener" }, text) : null;
-  }
 
   // ---------- columns ----------
   function columns() {
     const base = [
-      { key: "rank", label: "#", cls: "rank", sortable: false },
-      { key: "model", label: "model", cls: "model", sortable: true },
+      { key: "rank", label: "Rank", cls: "rank", sortable: false },
+      { key: "model", label: "Model", cls: "model", sortable: true },
     ];
     if (state.view === "overall") {
       return base.concat([
-        { key: "mean_cer", label: "mean cer", cls: "num cer", sortable: true },
-        { key: "median_cer", label: "median", cls: "num", sortable: true },
-        { key: "catastrophic_pct", label: "over 50%", cls: "num", sortable: true },
-        { key: "coverage", label: "pages", cls: "num", sortable: true },
-        { key: "submitted_at", label: "date", cls: "", sortable: true },
-        { key: "links", label: "links", cls: "", sortable: false },
+        { key: "mean_cer", label: "Error rate", cls: "num cer", sortable: true },
+        { key: "median_cer", label: "Median", cls: "num", sortable: true },
+        { key: "coverage", label: "Pages", cls: "num", sortable: true },
+        { key: "submitted_at", label: "Added", cls: "", sortable: true },
       ]);
     }
     const cat = board.categories[state.view];
     return base.concat(
-      [{ key: "mean_cer", label: "overall", cls: "num", sortable: true }],
+      [{ key: "mean_cer", label: "Overall", cls: "num", sortable: true }],
       cat.values.map((v) => ({ key: `b:${v.name}`, label: v.name, sub: `${v.n} pages`, cls: "num", sortable: true })),
     );
   }
@@ -96,18 +95,13 @@
     const tr = el("tr");
     for (const c of cols) {
       const active = state.sort === c.key;
-      const th = el("th", {
-        scope: "col",
-        class: c.cls,
-        "aria-sort": active ? (state.dir === 1 ? "ascending" : "descending") : null,
-      });
+      const th = el("th", { scope: "col", class: c.cls, "aria-sort": active ? (state.dir === 1 ? "ascending" : "descending") : null });
       const label = el("span", {}, c.label, c.sub ? el("span", { class: "sub" }, c.sub) : null);
       if (c.sortable) {
-        const btn = el("button", { type: "button", class: "sort", "data-sort": c.key },
-          label, el("span", { class: "dir", "aria-hidden": "true" }, active ? (state.dir === 1 ? "↑" : "↓") : ""));
-        th.append(btn);
+        th.append(el("button", { type: "button", class: "sort", "data-sort": c.key },
+          label, el("span", { class: "dir", "aria-hidden": "true" }, active ? (state.dir === 1 ? "↑" : "↓") : "")));
       } else {
-        th.append(label);
+        th.append(c.key === "rank" ? el("span", { class: "visually-hidden" }, c.label) : label);
       }
       tr.append(th);
     }
@@ -116,32 +110,29 @@
 
   function modelCell(e) {
     const td = el("td", { class: "model" });
-    td.append(el("span", { class: "model__name" }, e.model));
-    if (e.stale) td.append(el("span", { class: "tag tag--stale", title: "Scored on an older dataset or scorer version" }, "older version"));
-    td.append(el("span", { class: "model__team" }, e.source === "bdrc-reference" ? `${e.team}, BDRC reference run` : e.team));
+    const url = safeUrl(e.model_url) || safeUrl(e.paper_url) || safeUrl(e.issue_url);
+    td.append(url ? el("a", { class: "model__name", href: url, rel: "noopener" }, e.model) : el("span", { class: "model__name" }, e.model));
+    if (e.stale) td.append(el("span", { class: "tag", title: "Scored on an older version of the dataset" }, "older version"));
+    td.append(el("span", { class: "model__team" }, e.team));
     return td;
   }
 
-  function linksCell(e) {
-    const td = el("td", { class: "links" });
-    const items = [
-      link(e.model_url, "model"),
-      link(e.paper_url, "paper"),
-      link(e.issue_url, "issue"),
-      link(e.predictions_url, "outputs"),
-    ].filter(Boolean);
-    if (items.length) td.append(...items);
-    else td.append(el("span", { class: "none" }, "none"));
-    return td;
+  function ghostRow(span) {
+    return el("tr", { class: "ghost" },
+      el("td", { class: "rank" }, el("span", { class: "rank__n", "aria-hidden": "true" }, "?")),
+      el("td", { colspan: String(span - 1) },
+        el("span", { class: "ghost__text" }, "Your model here?"),
+        el("a", { href: issueUrl }, "Submit it")));
   }
 
-  function renderBody(rows, cols) {
+  function renderBody(rows, cols, ranks) {
     const frag = document.createDocumentFragment();
-    const worst = Math.max(...rows.map((r) => r.mean_cer), 0.0001);
-    rows.forEach((e, i) => {
-      const tr = el("tr");
+    const worst = Math.max(...board.entries.map((r) => r.mean_cer), 0.0001);
+    for (const e of rows) {
+      const rank = ranks.get(e.id);
+      const tr = el("tr", { class: rank <= 3 ? `top-${rank}` : null });
       for (const c of cols) {
-        if (c.key === "rank") tr.append(el("td", { class: "rank" }, String(i + 1)));
+        if (c.key === "rank") tr.append(el("td", { class: "rank" }, el("span", { class: "rank__n" }, String(rank))));
         else if (c.key === "model") tr.append(modelCell(e));
         else if (c.key === "mean_cer" && state.view === "overall") {
           tr.append(el("td", { class: "num cer" },
@@ -150,10 +141,8 @@
               el("span", { class: "cer__value" }, pct(e.mean_cer)))));
         } else if (c.key === "mean_cer") tr.append(el("td", { class: "num metric" }, pct(e.mean_cer)));
         else if (c.key === "median_cer") tr.append(el("td", { class: "num metric" }, pct(e.median_cer)));
-        else if (c.key === "catastrophic_pct") tr.append(el("td", { class: "num metric" }, `${e.catastrophic_pct.toFixed(1)}%`));
         else if (c.key === "coverage") tr.append(el("td", { class: "num metric" }, `${e.coverage}/${e.n}`));
         else if (c.key === "submitted_at") tr.append(el("td", { class: "metric" }, (e.submitted_at || "").slice(0, 10)));
-        else if (c.key === "links") tr.append(linksCell(e));
         else if (c.key.startsWith("b:")) {
           const v = value(e, c.key);
           tr.append(Number.isFinite(v)
@@ -162,31 +151,55 @@
         }
       }
       frag.append(tr);
-    });
+    }
+    frag.append(ghostRow(cols.length));
     els.body.replaceChildren(frag);
   }
 
   function render() {
     if (!board) return;
     const q = state.q.trim().toLowerCase();
-    let rows = board.entries.filter((e) =>
+    const matches = board.entries.filter((e) =>
       (state.training === "all" || e.training === state.training) &&
       (!q || `${e.model} ${e.team}`.toLowerCase().includes(q)));
 
+    // Rank is always by overall error rate within the current filter, whatever the sort.
+    const ranks = new Map(matches.slice().sort((a, b) => a.mean_cer - b.mean_cer).map((e, i) => [e.id, i + 1]));
+
     const cols = columns();
     if (!cols.some((c) => c.key === state.sort && c.sortable)) { state.sort = "mean_cer"; state.dir = 1; }
-    rows = rows.slice().sort((a, b) => {
+    let rows = matches.slice().sort((a, b) => {
       const va = value(a, state.sort), vb = value(b, state.sort);
       if (va < vb) return -state.dir;
       if (va > vb) return state.dir;
       return a.mean_cer - b.mean_cer;
     });
+    const truncated = !state.all && !q && rows.length > TOP_N;
+    if (truncated) rows = rows.slice(0, TOP_N);
 
     renderHead(cols);
-    renderBody(rows, cols);
-    els.wrap.dataset.state = rows.length ? "full" : "empty";
+    renderBody(rows, cols, ranks);
+    els.wrap.hidden = rows.length === 0;
     els.empty.hidden = rows.length > 0;
+    els.more.hidden = !(truncated || (state.all && matches.length > TOP_N && !q));
+    els.more.textContent = truncated ? `Show all ${matches.length} models` : `Show top ${TOP_N}`;
     writeUrl();
+  }
+
+  // ---------- hero facts ----------
+  function renderHero() {
+    const best = board.entries[0];
+    if (best) {
+      $("[data-beat-cer]").textContent = pct(best.mean_cer);
+      $("[data-beat-model]").textContent = `${best.model}, ${best.team}`;
+      $("[data-to-beat]").hidden = false;
+    }
+    for (const tag of $$("[data-best]")) {
+      const [cat, name] = tag.dataset.best.split(":");
+      const scores = board.entries.map((e) => (e.breakdown[cat] || {})[name]).filter(Number.isFinite);
+      if (scores.length) tag.append(" ", el("b", {}, `best ${pct(Math.min(...scores))}`));
+    }
+    $("[data-meta]").textContent = `${board.entries.length} models, character error rate, lower is better`;
   }
 
   // ---------- controls ----------
@@ -207,10 +220,9 @@
       const next = btns[(i + (ev.key === "ArrowRight" ? 1 : btns.length - 1)) % btns.length];
       next.focus(); next.click();
     });
-    els.view.addEventListener("change", () => {
-      state.view = els.view.value; state.sort = "mean_cer"; state.dir = 1; render();
-    });
+    els.view.addEventListener("change", () => { state.view = els.view.value; state.sort = "mean_cer"; state.dir = 1; render(); });
     els.search.addEventListener("input", () => { state.q = els.search.value; render(); });
+    els.more.addEventListener("click", () => { state.all = !state.all; render(); });
     els.head.addEventListener("click", (ev) => {
       const btn = ev.target.closest("[data-sort]");
       if (!btn) return;
@@ -221,9 +233,7 @@
       const again = els.head.querySelector(`[data-sort="${CSS.escape(key)}"]`);
       if (again) again.focus();
     });
-    $("[data-clear]").addEventListener("click", () => {
-      state.training = "all"; state.q = ""; syncControls(); render();
-    });
+    $("[data-clear]").addEventListener("click", () => { state.training = "all"; state.q = ""; syncControls(); render(); });
     $("[data-retry]").addEventListener("click", load);
   }
 
@@ -248,14 +258,15 @@
       const seg = location.pathname.split("/").filter(Boolean)[0];
       if (m && seg) repo = `${m[1]}/${seg}`;
     }
-    $$("[data-issue-link]").forEach((a) => { a.href = `https://github.com/${repo}/issues/new?template=submission.yml`; });
-    $$("[data-repo-link]").forEach((a) => { a.href = `https://github.com/${repo}`; });
+    issueUrl = `https://github.com/${repo}/issues/new?template=submission.yml`;
+    $$("[data-issue-link]").forEach((a) => { a.href = issueUrl; });
+    $$("[data-repo-link]").forEach((a) => { a.href = `https://github.com/${repo}${a.dataset.repoHash || ""}`; });
+    $$(".ghost a").forEach((a) => { a.href = issueUrl; });
   }
 
   async function load() {
     els.error.hidden = true;
     els.wrap.hidden = false;
-    els.wrap.dataset.state = "loading";
     try {
       // On Pages the file sits beside the page; in a local checkout it's one level up.
       board = await fetchJson(["leaderboard.json", "../leaderboard/leaderboard.json"]);
@@ -264,19 +275,16 @@
       els.error.hidden = false;
       return;
     }
-    const opts = [el("option", { value: "overall" }, "overall")];
-    for (const [key, cat] of Object.entries(board.categories)) opts.push(el("option", { value: key }, cat.label.toLowerCase()));
+    const opts = [el("option", { value: "overall" }, "Overall score")];
+    for (const [key, cat] of Object.entries(board.categories)) opts.push(el("option", { value: key }, `By ${cat.label.toLowerCase()}`));
     els.view.replaceChildren(...opts);
     if (!board.categories[state.view]) state.view = "overall";
-
-    $("[data-readout=models]").textContent = String(board.entries.length);
-    $("[data-readout=revision]").textContent = board.dataset_revision.slice(0, 7);
-    $("[data-readout=scorer]").textContent = `v${board.scorer_version}`;
     syncControls();
+    renderHero();
     render();
-    // The table grew after the browser jumped to #submit or #scoring; jump again.
+    // The page grew after the browser jumped to an anchor; jump again.
     const target = location.hash && document.getElementById(location.hash.slice(1));
-    if (target && target.id !== "leaderboard") target.scrollIntoView();
+    if (target) target.scrollIntoView();
   }
 
   readUrl();
