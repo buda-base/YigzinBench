@@ -1,0 +1,44 @@
+name: Score submission
+
+# Scores a submission issue when it is opened or edited and replies with the CER.
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: score-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  score:
+    if: github.event.issue.state == 'open' && contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scorer/requirements.txt
+      - run: pip install -r scorer/requirements.txt
+
+      # Issue text reaches the script only through env vars, never the shell.
+      - name: Score
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: python -m tools.submission score --comment "$RUNNER_TEMP/comment.md"
+
+      - name: Reply
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"

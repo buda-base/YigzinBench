@@ -1,0 +1,473 @@
+id,technology,script,script_4,period,rarity,legibility
+0002,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0003,digital_fonts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0004,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0005,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0006,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0007,manuscripts,Uchen,Uchen,Late Early (9-11th c),2 - uncommon,4 - Excellent
+0008,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,3 - Good
+0009,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0010,manuscripts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+0011,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0012,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0013,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0014,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0015,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0016,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0017,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,1 - Poor
+0018,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0019,digital_fonts,Uchen,Uchen,Early Modern to now (15-present),3 - common,4 - Excellent
+0020,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,3 - Good
+0021,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,3 - Good
+0023,manuscripts,Ume,Druma,Classical (12-14th c),2 - uncommon,3 - Good
+0024,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,1 - Poor
+0025,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0026,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0027,digital_fonts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+0028,manuscripts,Ume,Gyuyig,Modern (18-present),2 - uncommon,2 - Fair
+0029,typewriters,Uchen,Uchen,Modern (18-present),2 - uncommon,3 - Good
+0030,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0031,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),1 - rare,4 - Excellent
+0033,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0034,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0039,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,4 - Excellent
+0040,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0041,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0042,digital_fonts,Ume,Druma,Classical (12-14th c),0 - extremely rare,4 - Excellent
+0043,manuscripts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0044,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,2 - Fair
+0045,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0046,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0048,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0049,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,1 - Poor
+0050,manuscripts,Ume,Druma,Classical (12-14th c),1 - rare,2 - Fair
+0052,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,0 - Illegible
+0054,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0058,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0059,digital_fonts,Uchen,Uchen,Early Modern to now (15-present),3 - common,4 - Excellent
+0060,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0062,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0063,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0064,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),2 - uncommon,4 - Excellent
+0065,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,1 - Poor
+0066,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,1 - Poor
+0067,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,3 - Good
+0069,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0070,digital_fonts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+0071,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0074,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0075,manuscripts,Uchen,Uchen,Early Modern to now (15-present),3 - common,4 - Excellent
+0077,digital_fonts,Uchen,Uchen,Contemporary (20-21st C),3 - common,4 - Excellent
+0078,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0079,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0080,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0081,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0082,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0083,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0084,manuscripts,Uchen+Ume,,Early Modern to now (15-present),2 - uncommon,3 - Good
+0085,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0086,manuscripts,Ume,Pedri,Late Classical (14-15th c.),4 - very common,3 - Good
+0087,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),1 - rare,4 - Excellent
+0088,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+0089,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0090,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0093,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0095,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0096,manuscripts,Ume,Druma,Early Modern to Modern (17-present),2 - uncommon,4 - Excellent
+0097,modern,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0098,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0100,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0101,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0104,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0105,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0106,digital_fonts,Ume,Tsugdri,Modern (18-present),2 - uncommon,4 - Excellent
+0107,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0108,digital_fonts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+0113,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0115,manuscripts,Uchen,Uchen,Late Early (9-11th c),2 - uncommon,4 - Excellent
+0116,manuscripts,Transitional,Non-applicable,,,3 - Good
+0117,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),1 - rare,4 - Excellent
+0118,digital_fonts,Ume,Non-applicable,Contemporary (19-present),2 - uncommon,4 - Excellent
+0119,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0120,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0121,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),4 - very common,4 - Excellent
+0122,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0123,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0125,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0126,manuscripts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0127,manuscripts,Uchen,Uchen,Late Early (9-11th c),1 - rare,4 - Excellent
+0128,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0129,digital_fonts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0132,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0133,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,1 - Poor
+0134,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0135,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+0138,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),2 - uncommon,4 - Excellent
+0139,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0143,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0144,digital_fonts,Uchen,Uchen,Contemporary (20-21st C),4 - very common,4 - Excellent
+0145,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0146,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0150,digital_fonts,Uchen,Uchen,Late Early (9-11th c),2 - uncommon,4 - Excellent
+0153,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0157,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0158,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0163,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),2 - uncommon,4 - Excellent
+0164,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0167,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0170,digital_fonts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0171,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0173,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0174,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0176,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,1 - Poor
+0177,digital_fonts,Ume,Druma,Modern (18-present),2 - uncommon,4 - Excellent
+0179,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0180,digital_fonts,Ume,Non-applicable,Contemporary (19-present),2 - uncommon,4 - Excellent
+0181,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0182,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0184,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,2 - Fair
+0185,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0186,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0187,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0189,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0190,digital_fonts,Ume,Pedri,Medieval (15)-present,,4 - Excellent
+0193,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,3 - Good
+0194,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,3 - Good
+0195,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0196,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,3 - Good
+0197,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+0200,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0201,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,1 - Poor
+0203,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,4 - Excellent
+0204,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0206,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0208,digital_fonts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0209,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0210,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0212,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,4 - Excellent
+0213,manuscripts,Transitional,Non-applicable,Medieval (15)-present,3 - common,3 - Good
+0214,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0218,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0220,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0221,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0222,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),1 - rare,4 - Excellent
+0224,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0225,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0227,manuscripts,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0228,digital_fonts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0229,manuscripts,Ume,Non-applicable,Modern (18-present),2 - uncommon,3 - Good
+0231,manuscripts,Transitional,Non-applicable,Medieval (15)-present,3 - common,4 - Excellent
+0233,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0234,manuscripts,Uchen,Uchen,Early Modern to now (15-present),4 - very common,4 - Excellent
+0236,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0238,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0242,manuscripts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0243,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0244,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,3 - Good
+0245,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0247,digital_fonts,Ume,Non-applicable,Contemporary (19-present),2 - uncommon,4 - Excellent
+0248,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0253,manuscripts,Uchen,Non-applicable,,,4 - Excellent
+0255,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0256,manuscripts,Uchen+Ume,,Modern (18-present),3 - common,4 - Excellent
+0261,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0263,digital_fonts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+0264,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0266,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+0267,digital_fonts,Ume,Danyig,Late Classical (14-15th c.),2 - uncommon,4 - Excellent
+0269,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0272,manuscripts,Ume+Ume,,Modern (18-present),3 - common,1 - Poor
+0274,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0280,manuscripts,Ume,Pedri,Late Classical (14-15th c.),4 - very common,4 - Excellent
+0282,modern,Uchen+Uchen,,Early Modern to now (15-present),4 - very common,4 - Excellent
+0284,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+0285,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0287,digital_fonts,Uchen,Uchen,Contemporary (20-21st C),4 - very common,4 - Excellent
+0289,manuscripts,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0292,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0294,digital_fonts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0295,digital_fonts,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0296,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0297,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0298,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0299,digital_fonts,Ume,Non-applicable,Contemporary (19-present),2 - uncommon,4 - Excellent
+0301,digital_fonts,Ume,Non-applicable,Contemporary (19-present),2 - uncommon,4 - Excellent
+0303,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0304,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0306,manuscripts,Ume,Pedri,Late Classical (14-15th c.),4 - very common,4 - Excellent
+0307,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0311,digital_fonts,Ume,Druma,Modern (18-present),2 - uncommon,4 - Excellent
+0312,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0313,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,3 - Good
+0314,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0319,manuscripts,Ume,Danyig,Late Classical (14-15th c.),3 - common,4 - Excellent
+0322,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+0326,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0327,manuscripts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0331,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0333,manuscripts,Ume,Druma,Late Early (9-11th c),2 - uncommon,3 - Good
+0334,digital_fonts,Uchen,Non-applicable,Contemporary (20-21st C),2 - uncommon,4 - Excellent
+0336,manuscripts,Uchen,Uchen,Early Modern to now (15-present),4 - very common,4 - Excellent
+0337,manuscripts,Ume+Uchen,,Early Modern to now (15-present),3 - common,4 - Excellent
+0340,digital_fonts,Uchen,Uchen,Contemporary (20-21st C),3 - common,4 - Excellent
+0341,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0342,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,3 - Good
+0345,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,3 - Good
+0346,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,2 - Fair
+0350,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0351,digital_fonts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0352,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0355,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0356,digital_fonts,Ume,Danyig,Classical (12-14th c),3 - common,4 - Excellent
+0366,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0370,manuscripts,Ume,Danyig,Late Classical (14-15th c.),3 - common,4 - Excellent
+0372,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,2 - Fair
+0374,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0376,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0379,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0381,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0382,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0385,digital_fonts,Uchen,Uchen,Contemporary (20-21st C),3 - common,4 - Excellent
+0387,digital_fonts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0390,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0394,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0395,digital_fonts,Ume,Tsugdri,Modern (18-present),2 - uncommon,4 - Excellent
+0396,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0397,digital_fonts,Uchen,Uchen,Contemporary (19-present),1 - rare,4 - Excellent
+0398,manuscripts,Ume,Danyig,Late Classical (14-15th c.),3 - common,3 - Good
+0399,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0401,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0402,manuscripts,Ume,Danyig,Classical (12-14th c),3 - common,4 - Excellent
+0404,digital_fonts,Transitional,Non-applicable,Mid Early (8-9th c),0 - extremely rare,4 - Excellent
+0405,digital_fonts,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0407,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0408,typewriters,Uchen,Uchen,Modern (18-present),1 - rare,3 - Good
+0409,digital_fonts,Uchen,Uchen,Contemporary (20-21st C),4 - very common,4 - Excellent
+0411,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,3 - Good
+0421,digital_fonts,Ume,Druma,Classical (12-14th c),2 - uncommon,4 - Excellent
+0423,digital_fonts,Ume,Druma,Early Modern to Modern (17-present),2 - uncommon,4 - Excellent
+0427,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0429,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0431,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0436,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,3 - Good
+0438,digital_fonts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+0441,digital_fonts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0444,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,3 - Good
+0445,manuscripts,Ume,Druma,Classical (12-14th c),3 - common,4 - Excellent
+0447,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,2 - Fair
+0448,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0449,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0457,manuscripts,Ume+Uchen,,Early Modern to now (15-present),2 - uncommon,3 - Good
+0458,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0461,manuscripts,Ume,Druma,Late Early (9-11th c),2 - uncommon,4 - Excellent
+0463,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0465,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,3 - Good
+0467,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0469,manuscripts,Ume,Danyig,Classical (12-14th c),3 - common,4 - Excellent
+0470,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+0474,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,2 - Fair
+0475,manuscripts,Transitional,Non-applicable,Medieval (15)-present,3 - common,4 - Excellent
+0476,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0477,digital_fonts,Ume,Druma,Modern (18-present),2 - uncommon,4 - Excellent
+0478,modern,Ume,Danyig,Late Classical (14-15th c.),3 - common,4 - Excellent
+0479,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0481,manuscripts,Uchen,Uchen,Late Early (9-11th c),2 - uncommon,3 - Good
+0483,manuscripts,Uchen,Non-applicable,,,4 - Excellent
+0485,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,3 - Good
+0487,modern,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0491,digital_fonts,Ume,Tsugdri,Modern (18-present),2 - uncommon,4 - Excellent
+0496,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,1 - Poor
+0497,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,3 - Good
+0502,manuscripts,Uchen,Uchen,Late Early (9-11th c),2 - uncommon,3 - Good
+0503,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0509,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0510,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0513,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0515,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0523,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0524,manuscripts,Transitional,Uchen,Early Classical (11-12th c.),2 - uncommon,2 - Fair
+0525,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0530,manuscripts,Ume,Danyig,Classical (12-14th c),1 - rare,4 - Excellent
+0533,digital_fonts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0534,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0537,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0539,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,3 - Good
+0541,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,2 - Fair
+0545,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0546,manuscripts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0549,manuscripts,Ume,Druma,Early Classical (11-12th c.),2 - uncommon,4 - Excellent
+0550,manuscripts,Uchen,Non-applicable,,,4 - Excellent
+0551,manuscripts,Ume,Druma,Classical (12-14th c),1 - rare,4 - Excellent
+0554,manuscripts,Ume+Ume,,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0555,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),4 - very common,4 - Excellent
+0557,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0560,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0566,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0567,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0571,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,3 - Good
+0573,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0574,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0575,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0577,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0578,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0579,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0583,digital_fonts,Ume,Druma,Early Modern to Modern (17-present),2 - uncommon,4 - Excellent
+0584,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,2 - Fair
+0585,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0587,digital_fonts,Transitional,Uchen,Early Classical (11-12th c.),2 - uncommon,4 - Excellent
+0592,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,3 - Good
+0599,manuscripts,Uchen+Ume,,Modern (18-present),4 - very common,4 - Excellent
+0600,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0602,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0603,modern,Uchen,Uchen,Contemporary (20-21st C),4 - very common,4 - Excellent
+0605,digital_fonts,Transitional,Uchen,Early Classical (11-12th c.),2 - uncommon,4 - Excellent
+0606,digital_fonts,Ume,Non-applicable,Contemporary (19-present),2 - uncommon,4 - Excellent
+0607,digital_fonts,Uchen,Uchen,Early Modern to now (15-present),3 - common,4 - Excellent
+0608,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,3 - Good
+0609,manuscripts,Uchen,Uchen,Late Early (9-11th c),2 - uncommon,3 - Good
+0611,manuscripts,Ume,Pedri,Late Classical (14-15th c.),2 - uncommon,4 - Excellent
+0614,manuscripts,Ume,Pedri,Late Classical (14-15th c.),3 - common,2 - Fair
+0615,manuscripts,Ume,Pedri,Late Classical (14-15th c.),2 - uncommon,3 - Good
+0616,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0622,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0623,manuscripts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0625,digital_fonts,Ume,Druma,Early Modern to Modern (17-present),2 - uncommon,4 - Excellent
+0627,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0631,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0632,modern,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0638,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0640,manuscripts,Ume,Druma,Classical (12-14th c),2 - uncommon,4 - Excellent
+0641,manuscripts,Ume,Druma,Classical (12-14th c),3 - common,4 - Excellent
+0644,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0646,manuscripts,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0647,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,2 - Fair
+0653,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0655,digital_fonts,Ume,Tsugdri,Modern (18-present),2 - uncommon,4 - Excellent
+0656,manuscripts,Ume,Danyig,Classical (12-14th c),3 - common,4 - Excellent
+0657,manuscripts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0660,digital_fonts,Uchen,Uchen,Early scripts (7-8th c),0 - extremely rare,4 - Excellent
+0663,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,3 - Good
+0664,manuscripts,Transitional,Non-applicable,,,4 - Excellent
+0670,digital_fonts,Uchen,Uchen,Late Early (9-11th c),1 - rare,4 - Excellent
+0676,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0682,modern,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0683,manuscripts,Ume,Gyuyig,Modern (18-present),2 - uncommon,3 - Good
+0686,digital_fonts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0689,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0690,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0697,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,1 - Poor
+0698,manuscripts,Uchen,Uchen,Medieval (15)-present,4 - very common,2 - Fair
+0699,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,3 - Good
+0706,typewriters,Uchen,Uchen,Modern (18-present),1 - rare,2 - Fair
+0712,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,3 - Good
+0716,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0718,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0720,manuscripts,Transitional,Uchen,Early Classical (11-12th c.),2 - uncommon,3 - Good
+0723,digital_fonts,Ume,Druma,Classical (12-14th c),3 - common,4 - Excellent
+0725,metal_types,Uchen,Uchen,Contemporary (20-21st C),3 - common,4 - Excellent
+0726,manuscripts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,3 - Good
+0727,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0732,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0735,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0737,digital_fonts,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0738,modern,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0743,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0744,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,4 - Excellent
+0754,manuscripts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+0764,typewriters,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0772,digital_fonts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0778,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0781,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0782,digital_fonts,Ume,Tsugdri,Modern (18-present),1 - rare,4 - Excellent
+0785,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,3 - Good
+0787,manuscripts,Ume,Pedri,Late Classical (14-15th c.),3 - common,3 - Good
+0791,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,3 - Good
+0792,digital_fonts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0796,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0801,metal_types,Uchen,Uchen,Modern (18-present),1 - rare,4 - Excellent
+0802,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0807,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0808,digital_fonts,Ume,Tsugdri,Modern (18-present),2 - uncommon,4 - Excellent
+0810,manuscripts,Transitional,Uchen,Early Classical (11-12th c.),2 - uncommon,3 - Good
+0815,manuscripts,Ume,Danyig,Late Classical (14-15th c.),3 - common,4 - Excellent
+0816,manuscripts,Ume,Pedri,Late Classical (14-15th c.),4 - very common,4 - Excellent
+0819,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+0820,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0831,modern,Uchen,Uchen,Medieval (15)-present,4 - very common,4 - Excellent
+0835,manuscripts,Uchen,Uchen,Late Early (9-11th c),2 - uncommon,4 - Excellent
+0836,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0839,digital_fonts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0840,digital_fonts,Uchen,Uchen,Contemporary (19-present),1 - rare,4 - Excellent
+0842,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0843,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0848,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0852,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,2 - Fair
+0854,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0857,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,2 - Fair
+0858,digital_fonts,Ume,Druma,Early Modern to Modern (17-present),2 - uncommon,4 - Excellent
+0860,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,3 - Good
+0861,digital_fonts,Ume,Druma,Early Modern to Modern (17-present),2 - uncommon,4 - Excellent
+0864,digital_fonts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0869,manuscripts,Ume,Danyig,Late Classical (14-15th c.),3 - common,4 - Excellent
+0876,manuscripts,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0887,digital_fonts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0889,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,4 - Excellent
+0891,digital_fonts,Uchen,Uchen,Early Modern to now (15-present),4 - very common,4 - Excellent
+0892,manuscripts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0894,blockprints,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+0895,manuscripts,Ume,Druma,Early Modern to Modern (17-present),2 - uncommon,4 - Excellent
+0896,digital_fonts,Ume,Non-applicable,Contemporary (19-present),2 - uncommon,4 - Excellent
+0902,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,4 - Excellent
+0904,digital_fonts,Ume,Tsugdri,Modern (18-present),2 - uncommon,4 - Excellent
+0914,digital_fonts,Ume,Druma,Classical (12-14th c),3 - common,4 - Excellent
+0918,digital_fonts,Transitional,Uchen,Early Classical (11-12th c.),2 - uncommon,4 - Excellent
+0919,manuscripts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0921,manuscripts,Uchen,Uchen,Early Modern to now (15-present),4 - very common,2 - Fair
+0923,blockprints,Uchen,Uchen,Medieval (15)-present,4 - very common,1 - Poor
+0924,digital_fonts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0927,manuscripts,Uchen,Uchen,Early Modern to now (15-present),3 - common,4 - Excellent
+0930,digital_fonts,Uchen,Uchen,Early Modern to now (15-present),3 - common,4 - Excellent
+0934,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,3 - Good
+0936,modern,Uchen,Uchen,Modern (18-present),4 - very common,4 - Excellent
+0940,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0942,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,3 - Good
+0947,digital_fonts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0948,manuscripts,Uchen,Uchen,Early Modern to now (15-present),3 - common,4 - Excellent
+0950,digital_fonts,Transitional,Non-applicable,Mid Early (8-9th c),0 - extremely rare,4 - Excellent
+0955,digital_fonts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+0959,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+0962,digital_fonts,Ume,Gyuyig,Modern (18-present),2 - uncommon,4 - Excellent
+0966,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0975,blockprints,Uchen+Uchen,,Early Modern to now (15-present),3 - common,3 - Good
+0977,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+0980,digital_fonts,Ume,Pedri,Late Classical (14-15th c.),3 - common,4 - Excellent
+0986,manuscripts,Ume,Tsugdri,Early Modern to Modern (17-present),3 - common,4 - Excellent
+0987,typewriters,Uchen,Uchen,Modern (18-present),2 - uncommon,2 - Fair
+0990,blockprints,Uchen,Uchen,Medieval (15)-present,2 - uncommon,2 - Fair
+0994,digital_fonts,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+0995,manuscripts,Ume,Druma,Early Classical (11-12th c.),2 - uncommon,4 - Excellent
+0996,digital_fonts,Transitional,Uchen,Early Classical (11-12th c.),2 - uncommon,4 - Excellent
+1011,digital_fonts,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+1012,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+1016,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,4 - Excellent
+1018,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+1020,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+1021,digital_fonts,Ume,Pedri,Early Modern to Modern (17-present),4 - very common,4 - Excellent
+1025,manuscripts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,2 - Fair
+1028,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,2 - Fair
+1030,manuscripts,Ume,Pedri,Medieval (15)-present,2 - uncommon,3 - Good
+1032,digital_fonts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,4 - Excellent
+1034,manuscripts,Uchen,Uchen,Medieval (15)-present,3 - common,3 - Good
+1036,digital_fonts,Ume,Druma,Modern (18-present),2 - uncommon,4 - Excellent
+1038,metal_types,Uchen,Uchen,Modern (18-present),1 - rare,4 - Excellent
+1041,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+1043,manuscripts,Ume+Ume,,Early Modern to now (15-present),3 - common,2 - Fair
+1049,manuscripts,Ume,Gyuyig,Early Modern to now (15-present),3 - common,3 - Good
+1052,digital_fonts,Ume,Gyuyig,Modern (18-present),3 - common,4 - Excellent
+1056,manuscripts,Ume,Pedri,Medieval (15)-present,3 - common,3 - Good
+1059,digital_fonts,Uchen,Uchen,Modern (18-present),3 - common,4 - Excellent
+1062,manuscripts,Ume,Gyuyig,Modern (18-present),2 - uncommon,3 - Good
+1067,metal_types,Uchen,Uchen,Modern (18-present),2 - uncommon,4 - Excellent
+1071,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,3 - Good
+1072,manuscripts,Ume,Gyuyig,Modern (18-present),3 - common,2 - Fair
+1075,digital_fonts,Ume,Gyuyig,Early Modern to Modern (17-present),3 - common,4 - Excellent

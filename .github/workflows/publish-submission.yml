@@ -1,0 +1,77 @@
+name: Publish submission
+
+# A maintainer adds the `approved` label to a scored submission issue: re-score it,
+# store it under submissions/issue-<n>/, rebuild leaderboard.json, commit, close.
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.event.label.name == 'approved' && contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check the approver has write access
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SENDER: ${{ github.event.sender.login }}
+        run: |
+          perm=$(gh api "repos/$GITHUB_REPOSITORY/collaborators/$SENDER/permission" --jq .permission)
+          case "$perm" in
+            admin|maintain|write) echo "approved by $SENDER ($perm)" ;;
+            *) echo "::error::$SENDER has '$perm' access; only maintainers can approve"; exit 1 ;;
+          esac
+
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scorer/requirements.txt
+      - run: pip install -r scorer/requirements.txt
+
+      - name: Score and store
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
+          ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: python -m tools.submission publish --comment "$RUNNER_TEMP/comment.md"
+
+      - name: Commit
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add submissions leaderboard
+          if git diff --cached --quiet; then echo "already published, nothing changed"; exit 0; fi
+          git commit -m "Publish submission #$ISSUE_NUMBER"
+          git pull --rebase
+          git push
+
+      # Runs on failure too, so the submitter sees why it wasn't published.
+      - name: Reply
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          [ -f "$RUNNER_TEMP/comment.md" ] || exit 0
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+
+      - name: Close issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed

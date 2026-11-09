@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YigzinBench · Tibetan OCR leaderboard</title>
+  <meta name="description" content="Character error rate of OCR models on the 472 pages of the BDRC Tibetan OCR benchmark. Run your model and submit its output to be ranked.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Geist:wght@400;500&family=Geist+Mono:wght@400&family=Noto+Serif+Tibetan:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="wordmark" href="./" aria-label="YigzinBench home">yigzinbench</a>
+      <nav class="topbar__nav" aria-label="Main">
+        <a href="#leaderboard">leaderboard</a>
+        <a href="#submit">submit</a>
+        <a href="#scoring">scoring</a>
+      </nav>
+      <a class="btn btn--primary topbar__action" data-issue-link href="https://github.com/buda-base/YigzinBench/issues/new?template=submission.yml">submit a model</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container intro" id="leaderboard" aria-labelledby="title">
+      <div class="intro__text">
+        <h1 id="title">tibetan ocr leaderboard</h1>
+        <p class="lead">Character error rate on the 472 pages of the <a href="https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark">BDRC Tibetan OCR benchmark</a>. Lower is better.</p>
+      </div>
+      <dl class="readouts" aria-label="Benchmark version">
+        <div><dt>pages</dt><dd class="readout" data-readout="pages">472</dd></div>
+        <div><dt>models</dt><dd class="readout" data-readout="models">…</dd></div>
+        <div><dt>dataset</dt><dd class="readout" data-readout="revision">…</dd></div>
+        <div><dt>scorer</dt><dd class="readout" data-readout="scorer">…</dd></div>
+      </dl>
+    </section>
+
+    <section class="container board" aria-label="Rankings">
+      <div class="toolbar" role="group" aria-label="Table controls">
+        <div class="field">
+          <span class="field__label" id="training-label">training</span>
+          <div class="seg" role="radiogroup" aria-labelledby="training-label">
+            <button type="button" role="radio" data-training="all" aria-checked="true">all</button>
+            <button type="button" role="radio" data-training="off-the-shelf" aria-checked="false" title="No Tibetan-specific training">off-the-shelf</button>
+            <button type="button" role="radio" data-training="fine-tuned" aria-checked="false" title="Fine-tuned or trained for Tibetan">fine-tuned</button>
+          </div>
+        </div>
+        <label class="field">
+          <span class="field__label">break down by</span>
+          <select name="view" data-view>
+            <option value="overall">overall</option>
+          </select>
+        </label>
+        <label class="field field--search">
+          <span class="field__label">find a model</span>
+          <input type="search" name="q" data-search autocomplete="off" spellcheck="false" placeholder="name or team">
+        </label>
+      </div>
+
+      <div class="table-wrap" data-state="loading" tabindex="0" aria-label="Leaderboard table, scrolls sideways">
+        <table class="ledger">
+          <caption class="visually-hidden">OCR models ranked by mean character error rate</caption>
+          <thead data-head></thead>
+          <tbody data-body>
+            <tr class="skeleton"><td colspan="8"><span></span></td></tr>
+            <tr class="skeleton"><td colspan="8"><span></span></td></tr>
+            <tr class="skeleton"><td colspan="8"><span></span></td></tr>
+            <tr class="skeleton"><td colspan="8"><span></span></td></tr>
+          </tbody>
+        </table>
+        <noscript><p class="state-note">The table needs JavaScript. The raw data is in <a href="leaderboard.json">leaderboard.json</a>.</p></noscript>
+      </div>
+
+      <div class="state-note" data-empty hidden>
+        <p>No model matches these filters.</p>
+        <button type="button" class="btn btn--secondary" data-clear>clear filters</button>
+      </div>
+      <div class="state-note state-note--error" data-error hidden role="alert">
+        <p>The leaderboard data didn’t load. Check your connection and try again.</p>
+        <button type="button" class="btn btn--secondary" data-retry>try again</button>
+      </div>
+      <p class="footnote">CER is the mean over all pages; a page a model skipped counts as 100%. “Over 50%” is the share of pages the model mostly got wrong. Reference runs are BDRC’s own evaluations; marked entries were scored on an older dataset version.</p>
+    </section>
+
+    <section class="band" id="submit" aria-labelledby="submit-title">
+      <div class="container band__inner">
+        <h2 id="submit-title">submit a model</h2>
+        <ol class="steps">
+          <li>
+            <h3>download the pages</h3>
+            <p>All 472 page images and their metadata are in one test split.</p>
+            <pre class="code"><code>from datasets import load_dataset
+ds = load_dataset("BDRC/tibetan-ocr-benchmark", split="test")</code></pre>
+          </li>
+          <li>
+            <h3>write one csv</h3>
+            <p>UTF-8, header <code>id,transcription</code>, one row per page, ids unchanged.</p>
+            <pre class="code"><code>id,transcription
+0002,"<span lang="bo">༄༅། །སྔོ་ལྗང་མྱུ་གུ་ཡིས་ཁྱབ་ཅིང་།</span> ..."
+0003,"..."</code></pre>
+          </li>
+          <li>
+            <h3>check the score locally</h3>
+            <p>The same scorer the leaderboard runs.</p>
+            <pre class="code"><code>pip install -r scorer/requirements.txt
+python -m scorer.score predictions.csv</code></pre>
+          </li>
+          <li>
+            <h3>open a submission</h3>
+            <p>Fill in the form and drop the CSV in. A bot replies with your score; a maintainer then adds it here.</p>
+            <a class="btn btn--secondary" data-issue-link href="https://github.com/buda-base/YigzinBench/issues/new?template=submission.yml">open the submission form</a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="container scoring" id="scoring" aria-labelledby="scoring-title">
+      <h2 id="scoring-title">how scoring works</h2>
+      <dl class="facts">
+        <div><dt>normalization</dt><dd>Your text is normalized with <a href="https://github.com/OpenPecha/Botok">botok</a>. Whitespace is removed, repeated tsheg fold to one, and the placeholder letters K, O, B, I, S are dropped.</dd></div>
+        <div><dt>per page</dt><dd>Levenshtein distance divided by the reference length, capped at 1.</dd></div>
+        <div><dt>ranking</dt><dd>The plain mean over all 472 pages. Missing pages count as 1.</dd></div>
+        <div><dt>reproducible</dt><dd>The scorer is BDRC’s reference implementation, and it reproduces their published numbers exactly. Code and every stored submission are in the <a data-repo-link href="https://github.com/buda-base/YigzinBench">repository</a>.</dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>Benchmark data by <a href="https://www.bdrc.io">BDRC</a>, released under CC0.</p>
+      <ul class="footer__links">
+        <li><a href="https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark">dataset</a></li>
+        <li><a href="https://huggingface.co/spaces/BDRC/tibetan-ocr-leaderboard">BDRC’s leaderboard space</a></li>
+        <li><a data-repo-link href="https://github.com/buda-base/YigzinBench">source</a></li>
+        <li><a href="leaderboard.json">leaderboard.json</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

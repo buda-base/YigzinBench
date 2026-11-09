@@ -1,0 +1,50 @@
+name: Deploy site
+
+# Commits pushed by other workflows don't trigger `push`, so this also runs
+# after the publish and re-score workflows finish.
+on:
+  push:
+    branches: [main]
+    paths: ["site/**", "leaderboard/**", ".github/workflows/deploy-pages.yml"]
+  workflow_run:
+    workflows: ["Publish submission", "Re-score all submissions"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp -r site/. _site/
+          cp leaderboard/leaderboard.json _site/leaderboard.json
+          printf '{"repo": "%s"}\n' "$GITHUB_REPOSITORY" > _site/config.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
