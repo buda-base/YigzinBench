@@ -1,0 +1,14 @@
+{
+  "model": "gemini-3.5-flash",
+  "team": "Gemini",
+  "training": "off-the-shelf",
+  "open_weights": null,
+  "model_url": "",
+  "paper_url": "",
+  "notes": "BDRC reference run `2026-05-24T16-23-15`.",
+  "source": "bdrc-reference",
+  "submitted_by": "BDRC",
+  "submitted_at": "2026-05-24T16:23:15Z",
+  "issue_url": "",
+  "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-24T16-23-15.csv"
+}

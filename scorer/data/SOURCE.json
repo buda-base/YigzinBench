@@ -1,0 +1,10 @@
+{
+  "dataset": "BDRC/tibetan-ocr-benchmark",
+  "revision": "bb50fb52976df2d8b392f8d69c3925491ca58976",
+  "split": "test",
+  "files": {
+    "ground_truth.csv": "runs/ground_truth.csv",
+    "pages.csv": "data/test-00000-of-00001.parquet (metadata columns only)"
+  },
+  "license": "CC0-1.0"
+}

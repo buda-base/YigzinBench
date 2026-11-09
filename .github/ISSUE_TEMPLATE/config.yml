@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Benchmark dataset on Hugging Face
+    url: https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark
+    about: Download the 472 test pages and read the transcription conventions.

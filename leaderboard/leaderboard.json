@@ -1,0 +1,3899 @@
+{
+ "dataset": "BDRC/tibetan-ocr-benchmark",
+ "dataset_revision": "bb50fb52976df2d8b392f8d69c3925491ca58976",
+ "scorer_version": "1.0.0",
+ "categories": {
+  "technology": {
+   "label": "Technology",
+   "values": [
+    {
+     "name": "manuscripts",
+     "n": 209
+    },
+    {
+     "name": "digital_fonts",
+     "n": 133
+    },
+    {
+     "name": "blockprints",
+     "n": 91
+    },
+    {
+     "name": "modern",
+     "n": 17
+    },
+    {
+     "name": "metal_types",
+     "n": 17
+    },
+    {
+     "name": "typewriters",
+     "n": 5
+    }
+   ]
+  },
+  "script": {
+   "label": "Script",
+   "values": [
+    {
+     "name": "Uchen",
+     "n": 238
+    },
+    {
+     "name": "Ume",
+     "n": 193
+    },
+    {
+     "name": "Transitional",
+     "n": 21
+    },
+    {
+     "name": "Uchen+Uchen",
+     "n": 12
+    },
+    {
+     "name": "Uchen+Ume",
+     "n": 3
+    },
+    {
+     "name": "Ume+Ume",
+     "n": 3
+    },
+    {
+     "name": "Ume+Uchen",
+     "n": 2
+    }
+   ]
+  },
+  "script_4": {
+   "label": "Script style",
+   "values": [
+    {
+     "name": "Uchen",
+     "n": 234
+    },
+    {
+     "name": "Gyuyig",
+     "n": 79
+    },
+    {
+     "name": "Pedri",
+     "n": 49
+    },
+    {
+     "name": "Non-applicable",
+     "n": 33
+    },
+    {
+     "name": "Druma",
+     "n": 25
+    },
+    {
+     "name": "Tsugdri",
+     "n": 20
+    },
+    {
+     "name": "Danyig",
+     "n": 12
+    },
+    {
+     "name": "Unknown",
+     "n": 20
+    }
+   ]
+  },
+  "legibility": {
+   "label": "Legibility",
+   "values": [
+    {
+     "name": "4 - Excellent",
+     "n": 293
+    },
+    {
+     "name": "3 - Good",
+     "n": 124
+    },
+    {
+     "name": "2 - Fair",
+     "n": 42
+    },
+    {
+     "name": "1 - Poor",
+     "n": 12
+    },
+    {
+     "name": "0 - Illegible",
+     "n": 1
+    }
+   ]
+  },
+  "rarity": {
+   "label": "Rarity",
+   "values": [
+    {
+     "name": "4 - very common",
+     "n": 85
+    },
+    {
+     "name": "3 - common",
+     "n": 252
+    },
+    {
+     "name": "2 - uncommon",
+     "n": 102
+    },
+    {
+     "name": "1 - rare",
+     "n": 16
+    },
+    {
+     "name": "0 - extremely rare",
+     "n": 4
+    },
+    {
+     "name": "Unknown",
+     "n": 13
+    }
+   ]
+  },
+  "period": {
+   "label": "Period",
+   "values": [
+    {
+     "name": "Medieval (15)-present",
+     "n": 173
+    },
+    {
+     "name": "Modern (18-present)",
+     "n": 99
+    },
+    {
+     "name": "Early Modern to now (15-present)",
+     "n": 49
+    },
+    {
+     "name": "Early Modern to Modern (17-present)",
+     "n": 47
+    },
+    {
+     "name": "Late Classical (14-15th c.)",
+     "n": 29
+    },
+    {
+     "name": "Contemporary (20-21st C)",
+     "n": 16
+    },
+    {
+     "name": "Classical (12-14th c)",
+     "n": 15
+    },
+    {
+     "name": "Late Early (9-11th c)",
+     "n": 11
+    },
+    {
+     "name": "Contemporary (19-present)",
+     "n": 9
+    },
+    {
+     "name": "Early Classical (11-12th c.)",
+     "n": 9
+    },
+    {
+     "name": "Mid Early (8-9th c)",
+     "n": 2
+    },
+    {
+     "name": "Early scripts (7-8th c)",
+     "n": 1
+    },
+    {
+     "name": "Unknown",
+     "n": 12
+    }
+   ]
+  }
+ },
+ "entries": [
+  {
+   "id": "bdrc-2026-08-21T06-20-00",
+   "model": "Yigdzin-v1",
+   "team": "BDRC OCR",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-08-21T06-20-00`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-08-21T06:20:00Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-08-21T06-20-00.csv",
+   "mean_cer": 0.0321,
+   "median_cer": 0.0096,
+   "catastrophic_pct": 0.64,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.0289,
+     "digital_fonts": 0.0054,
+     "manuscripts": 0.0536,
+     "metal_types": 0.0113,
+     "modern": 0.0117,
+     "typewriters": 0.0396
+    },
+    "script": {
+     "Transitional": 0.0136,
+     "Uchen": 0.0274,
+     "Uchen+Uchen": 0.0128,
+     "Uchen+Ume": 0.075,
+     "Ume": 0.0401,
+     "Ume+Uchen": 0.0408,
+     "Ume+Ume": 0.0431
+    },
+    "script_4": {
+     "Danyig": 0.0399,
+     "Druma": 0.0372,
+     "Gyuyig": 0.0626,
+     "Non-applicable": 0.0199,
+     "Pedri": 0.0193,
+     "Tsugdri": 0.0111,
+     "Uchen": 0.0272,
+     "Unknown": 0.0295
+    },
+    "legibility": {
+     "0 - Illegible": 0.0262,
+     "1 - Poor": 0.069,
+     "2 - Fair": 0.1184,
+     "3 - Good": 0.0359,
+     "4 - Excellent": 0.0166
+    },
+    "rarity": {
+     "0 - extremely rare": 0.0,
+     "1 - rare": 0.0388,
+     "2 - uncommon": 0.0247,
+     "3 - common": 0.0335,
+     "4 - very common": 0.0386,
+     "Unknown": 0.0205
+    },
+    "period": {
+     "Classical (12-14th c)": 0.033,
+     "Contemporary (19-present)": 0.0041,
+     "Contemporary (20-21st C)": 0.0088,
+     "Early Classical (11-12th c.)": 0.0555,
+     "Early Modern to Modern (17-present)": 0.0488,
+     "Early Modern to now (15-present)": 0.0237,
+     "Early scripts (7-8th c)": 0.0,
+     "Late Classical (14-15th c.)": 0.0172,
+     "Late Early (9-11th c)": 0.0452,
+     "Medieval (15)-present": 0.0349,
+     "Mid Early (8-9th c)": 0.0,
+     "Modern (18-present)": 0.0326,
+     "Unknown": 0.0206
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-08-17T18-09-43",
+   "model": "bdrc-mitra-ocr-qwen35-0.8b",
+   "team": "MITRA-BDRC",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-08-17T18-09-43`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-08-17T18:09:43Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-08-17T18-09-43.csv",
+   "mean_cer": 0.0732,
+   "median_cer": 0.0192,
+   "catastrophic_pct": 2.97,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.0605,
+     "digital_fonts": 0.0118,
+     "manuscripts": 0.1207,
+     "metal_types": 0.0115,
+     "modern": 0.0737,
+     "typewriters": 0.1573
+    },
+    "script": {
+     "Transitional": 0.0609,
+     "Uchen": 0.043,
+     "Uchen+Uchen": 0.0954,
+     "Uchen+Ume": 0.1272,
+     "Ume": 0.1079,
+     "Ume+Uchen": 0.12,
+     "Ume+Ume": 0.1519
+    },
+    "script_4": {
+     "Danyig": 0.0614,
+     "Druma": 0.06,
+     "Gyuyig": 0.1907,
+     "Non-applicable": 0.0566,
+     "Pedri": 0.05,
+     "Tsugdri": 0.0338,
+     "Uchen": 0.0428,
+     "Unknown": 0.1111
+    },
+    "legibility": {
+     "0 - Illegible": 0.9982,
+     "1 - Poor": 0.1995,
+     "2 - Fair": 0.1341,
+     "3 - Good": 0.1132,
+     "4 - Excellent": 0.0392
+    },
+    "rarity": {
+     "0 - extremely rare": 0.0026,
+     "1 - rare": 0.0907,
+     "2 - uncommon": 0.0567,
+     "3 - common": 0.0883,
+     "4 - very common": 0.0452,
+     "Unknown": 0.0932
+    },
+    "period": {
+     "Classical (12-14th c)": 0.0662,
+     "Contemporary (19-present)": 0.012,
+     "Contemporary (20-21st C)": 0.0126,
+     "Early Classical (11-12th c.)": 0.0716,
+     "Early Modern to Modern (17-present)": 0.1008,
+     "Early Modern to now (15-present)": 0.0983,
+     "Early scripts (7-8th c)": 0.0015,
+     "Late Classical (14-15th c.)": 0.0358,
+     "Late Early (9-11th c)": 0.038,
+     "Medieval (15)-present": 0.0523,
+     "Mid Early (8-9th c)": 0.0044,
+     "Modern (18-present)": 0.1146,
+     "Unknown": 0.0987
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-16T07-39-22",
+   "model": "builtin/stable",
+   "team": "google_vision",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-16T07-39-22`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-16T07:39:22Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-16T07-39-22.csv",
+   "mean_cer": 0.2225,
+   "median_cer": 0.1683,
+   "catastrophic_pct": 9.11,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.1909,
+     "digital_fonts": 0.1375,
+     "manuscripts": 0.3216,
+     "metal_types": 0.0614,
+     "modern": 0.0313,
+     "typewriters": 0.1143
+    },
+    "script": {
+     "Transitional": 0.2509,
+     "Uchen": 0.1308,
+     "Uchen+Uchen": 0.2312,
+     "Uchen+Ume": 0.3731,
+     "Ume": 0.3258,
+     "Ume+Uchen": 0.3998,
+     "Ume+Ume": 0.3496
+    },
+    "script_4": {
+     "Danyig": 0.314,
+     "Druma": 0.3346,
+     "Gyuyig": 0.3782,
+     "Non-applicable": 0.2155,
+     "Pedri": 0.2502,
+     "Tsugdri": 0.3756,
+     "Uchen": 0.1299,
+     "Unknown": 0.2871
+    },
+    "legibility": {
+     "0 - Illegible": 0.5799,
+     "1 - Poor": 0.4734,
+     "2 - Fair": 0.3016,
+     "3 - Good": 0.2569,
+     "4 - Excellent": 0.1851
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2298,
+     "1 - rare": 0.207,
+     "2 - uncommon": 0.2125,
+     "3 - common": 0.2473,
+     "4 - very common": 0.1494,
+     "Unknown": 0.3159
+    },
+    "period": {
+     "Classical (12-14th c)": 0.3716,
+     "Contemporary (19-present)": 0.0542,
+     "Contemporary (20-21st C)": 0.0417,
+     "Early Classical (11-12th c.)": 0.2117,
+     "Early Modern to Modern (17-present)": 0.3307,
+     "Early Modern to now (15-present)": 0.2389,
+     "Early scripts (7-8th c)": 0.1173,
+     "Late Classical (14-15th c.)": 0.1903,
+     "Late Early (9-11th c)": 0.2293,
+     "Medieval (15)-present": 0.1877,
+     "Mid Early (8-9th c)": 0.1661,
+     "Modern (18-present)": 0.2461,
+     "Unknown": 0.3179
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-16T07-52-53",
+   "model": "builtin/weekly",
+   "team": "google_vision",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-16T07-52-53`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-16T07:52:53Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-16T07-52-53.csv",
+   "mean_cer": 0.247,
+   "median_cer": 0.1602,
+   "catastrophic_pct": 15.89,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.1625,
+     "digital_fonts": 0.1337,
+     "manuscripts": 0.3947,
+     "metal_types": 0.042,
+     "modern": 0.0253,
+     "typewriters": 0.0725
+    },
+    "script": {
+     "Transitional": 0.2909,
+     "Uchen": 0.1168,
+     "Uchen+Uchen": 0.1146,
+     "Uchen+Ume": 0.4872,
+     "Ume": 0.3982,
+     "Ume+Uchen": 0.5872,
+     "Ume+Ume": 0.5969
+    },
+    "script_4": {
+     "Danyig": 0.3298,
+     "Druma": 0.2961,
+     "Gyuyig": 0.5255,
+     "Non-applicable": 0.2518,
+     "Pedri": 0.3341,
+     "Tsugdri": 0.3176,
+     "Uchen": 0.1148,
+     "Unknown": 0.2901
+    },
+    "legibility": {
+     "0 - Illegible": 0.1238,
+     "1 - Poor": 0.4365,
+     "2 - Fair": 0.3449,
+     "3 - Good": 0.3183,
+     "4 - Excellent": 0.1954
+    },
+    "rarity": {
+     "0 - extremely rare": 0.309,
+     "1 - rare": 0.2153,
+     "2 - uncommon": 0.224,
+     "3 - common": 0.2827,
+     "4 - very common": 0.1572,
+     "Unknown": 0.3415
+    },
+    "period": {
+     "Classical (12-14th c)": 0.3632,
+     "Contemporary (19-present)": 0.0425,
+     "Contemporary (20-21st C)": 0.0646,
+     "Early Classical (11-12th c.)": 0.2647,
+     "Early Modern to Modern (17-present)": 0.4096,
+     "Early Modern to now (15-present)": 0.272,
+     "Early scripts (7-8th c)": 0.0361,
+     "Late Classical (14-15th c.)": 0.2169,
+     "Late Early (9-11th c)": 0.1986,
+     "Medieval (15)-present": 0.1843,
+     "Mid Early (8-9th c)": 0.4584,
+     "Modern (18-present)": 0.297,
+     "Unknown": 0.336
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-23T20-17-34",
+   "model": "PechaBridgeOCR_v1",
+   "team": "DONUT",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-23T20-17-34`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-23T20:17:34Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-23T20-17-34.csv",
+   "mean_cer": 0.2801,
+   "median_cer": 0.2096,
+   "catastrophic_pct": 22.67,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.244,
+     "digital_fonts": 0.1587,
+     "manuscripts": 0.4128,
+     "metal_types": 0.0828,
+     "modern": 0.0333,
+     "typewriters": 0.1289
+    },
+    "script": {
+     "Transitional": 0.2039,
+     "Uchen": 0.166,
+     "Uchen+Uchen": 0.2571,
+     "Uchen+Ume": 0.451,
+     "Ume": 0.4197,
+     "Ume+Uchen": 0.6712,
+     "Ume+Ume": 0.5455
+    },
+    "script_4": {
+     "Danyig": 0.3291,
+     "Druma": 0.225,
+     "Gyuyig": 0.5916,
+     "Non-applicable": 0.2066,
+     "Pedri": 0.2976,
+     "Tsugdri": 0.3954,
+     "Uchen": 0.1674,
+     "Unknown": 0.3708
+    },
+    "legibility": {
+     "0 - Illegible": 0.3108,
+     "1 - Poor": 0.4874,
+     "2 - Fair": 0.4294,
+     "3 - Good": 0.3645,
+     "4 - Excellent": 0.2144
+    },
+    "rarity": {
+     "0 - extremely rare": 0.0636,
+     "1 - rare": 0.2217,
+     "2 - uncommon": 0.2591,
+     "3 - common": 0.3295,
+     "4 - very common": 0.1803,
+     "Unknown": 0.279
+    },
+    "period": {
+     "Classical (12-14th c)": 0.2589,
+     "Contemporary (19-present)": 0.1693,
+     "Contemporary (20-21st C)": 0.0466,
+     "Early Classical (11-12th c.)": 0.2365,
+     "Early Modern to Modern (17-present)": 0.4254,
+     "Early Modern to now (15-present)": 0.3435,
+     "Early scripts (7-8th c)": 0.015,
+     "Late Classical (14-15th c.)": 0.1928,
+     "Late Early (9-11th c)": 0.2294,
+     "Medieval (15)-present": 0.242,
+     "Mid Early (8-9th c)": 0.0422,
+     "Modern (18-present)": 0.3397,
+     "Unknown": 0.2821
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-07-28T12-53-39",
+   "model": "PechaBridgeOCR_v2",
+   "team": "DONUT",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-07-28T12-53-39`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-07-28T12:53:39Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-07-28T12-53-39.csv",
+   "mean_cer": 0.3367,
+   "median_cer": 0.1988,
+   "catastrophic_pct": 28.6,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.2599,
+     "digital_fonts": 0.2119,
+     "manuscripts": 0.4964,
+     "metal_types": 0.1165,
+     "modern": 0.0478,
+     "typewriters": 0.1142
+    },
+    "script": {
+     "Transitional": 0.1739,
+     "Uchen": 0.1673,
+     "Uchen+Uchen": 0.3093,
+     "Uchen+Ume": 0.4479,
+     "Ume": 0.5513,
+     "Ume+Uchen": 0.9705,
+     "Ume+Ume": 0.6898
+    },
+    "script_4": {
+     "Danyig": 0.4721,
+     "Druma": 0.3599,
+     "Gyuyig": 0.7715,
+     "Non-applicable": 0.1869,
+     "Pedri": 0.373,
+     "Tsugdri": 0.5252,
+     "Uchen": 0.168,
+     "Unknown": 0.4533
+    },
+    "legibility": {
+     "0 - Illegible": 0.2719,
+     "1 - Poor": 0.6113,
+     "2 - Fair": 0.4905,
+     "3 - Good": 0.4585,
+     "4 - Excellent": 0.2522
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3262,
+     "1 - rare": 0.3576,
+     "2 - uncommon": 0.3234,
+     "3 - common": 0.391,
+     "4 - very common": 0.2107,
+     "Unknown": 0.1919
+    },
+    "period": {
+     "Classical (12-14th c)": 0.452,
+     "Contemporary (19-present)": 0.1459,
+     "Contemporary (20-21st C)": 0.0792,
+     "Early Classical (11-12th c.)": 0.2095,
+     "Early Modern to Modern (17-present)": 0.5268,
+     "Early Modern to now (15-present)": 0.4737,
+     "Early scripts (7-8th c)": 0.1338,
+     "Late Classical (14-15th c.)": 0.2289,
+     "Late Early (9-11th c)": 0.2242,
+     "Medieval (15)-present": 0.2484,
+     "Mid Early (8-9th c)": 0.296,
+     "Modern (18-present)": 0.4517,
+     "Unknown": 0.1828
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-06-11T06-41-57",
+   "model": "PaddleOCR-VL-1.6-0.9B",
+   "team": "PaddleOCR-VL",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-06-11T06-41-57`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-06-11T06:41:57Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-06-11T06-41-57.csv",
+   "mean_cer": 0.3744,
+   "median_cer": 0.2027,
+   "catastrophic_pct": 30.72,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.4882,
+     "digital_fonts": 0.099,
+     "manuscripts": 0.5336,
+     "metal_types": 0.2814,
+     "modern": 0.087,
+     "typewriters": 0.269
+    },
+    "script": {
+     "Transitional": 0.3724,
+     "Uchen": 0.3225,
+     "Uchen+Uchen": 0.3628,
+     "Uchen+Ume": 0.5304,
+     "Ume": 0.4351,
+     "Ume+Uchen": 0.3558,
+     "Ume+Ume": 0.5103
+    },
+    "script_4": {
+     "Danyig": 0.4901,
+     "Druma": 0.2816,
+     "Gyuyig": 0.6371,
+     "Non-applicable": 0.2905,
+     "Pedri": 0.2923,
+     "Tsugdri": 0.2829,
+     "Uchen": 0.3236,
+     "Unknown": 0.4093
+    },
+    "legibility": {
+     "0 - Illegible": 0.9476,
+     "1 - Poor": 0.6955,
+     "2 - Fair": 0.6006,
+     "3 - Good": 0.4889,
+     "4 - Excellent": 0.2785
+    },
+    "rarity": {
+     "0 - extremely rare": 0.0906,
+     "1 - rare": 0.312,
+     "2 - uncommon": 0.3193,
+     "3 - common": 0.4275,
+     "4 - very common": 0.2965,
+     "Unknown": 0.4512
+    },
+    "period": {
+     "Classical (12-14th c)": 0.4235,
+     "Contemporary (19-present)": 0.0293,
+     "Contemporary (20-21st C)": 0.0667,
+     "Early Classical (11-12th c.)": 0.3902,
+     "Early Modern to Modern (17-present)": 0.3859,
+     "Early Modern to now (15-present)": 0.4469,
+     "Early scripts (7-8th c)": 0.015,
+     "Late Classical (14-15th c.)": 0.282,
+     "Late Early (9-11th c)": 0.3875,
+     "Medieval (15)-present": 0.395,
+     "Mid Early (8-9th c)": 0.043,
+     "Modern (18-present)": 0.3935,
+     "Unknown": 0.4724
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-01T12-22-47",
+   "model": "gemini-3-pro-preview",
+   "team": "Gemini",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-01T12-22-47`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-01T12:22:47Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-01T12-22-47.csv",
+   "mean_cer": 0.3937,
+   "median_cer": 0.2654,
+   "catastrophic_pct": 40.89,
+   "coverage": 468,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.2264,
+     "digital_fonts": 0.3798,
+     "manuscripts": 0.5388,
+     "metal_types": 0.0325,
+     "modern": 0.0606,
+     "typewriters": 0.1057
+    },
+    "script": {
+     "Transitional": 0.1353,
+     "Uchen": 0.1189,
+     "Uchen+Uchen": 0.2309,
+     "Uchen+Ume": 0.5562,
+     "Ume": 0.758,
+     "Ume+Uchen": 0.7528,
+     "Ume+Ume": 0.8204
+    },
+    "script_4": {
+     "Danyig": 0.6351,
+     "Druma": 0.6728,
+     "Gyuyig": 0.8232,
+     "Non-applicable": 0.2241,
+     "Pedri": 0.7392,
+     "Tsugdri": 0.783,
+     "Uchen": 0.1226,
+     "Unknown": 0.4203
+    },
+    "legibility": {
+     "0 - Illegible": 0.6025,
+     "1 - Poor": 0.6011,
+     "2 - Fair": 0.4456,
+     "3 - Good": 0.4363,
+     "4 - Excellent": 0.3591
+    },
+    "rarity": {
+     "0 - extremely rare": 0.1813,
+     "1 - rare": 0.2725,
+     "2 - uncommon": 0.3922,
+     "3 - common": 0.4602,
+     "4 - very common": 0.2663,
+     "Unknown": 0.166
+    },
+    "period": {
+     "Classical (12-14th c)": 0.7205,
+     "Contemporary (19-present)": 0.4735,
+     "Contemporary (20-21st C)": 0.0379,
+     "Early Classical (11-12th c.)": 0.2999,
+     "Early Modern to Modern (17-present)": 0.7534,
+     "Early Modern to now (15-present)": 0.5271,
+     "Early scripts (7-8th c)": 0.009,
+     "Late Classical (14-15th c.)": 0.6708,
+     "Late Early (9-11th c)": 0.2095,
+     "Medieval (15)-present": 0.2284,
+     "Mid Early (8-9th c)": 0.0385,
+     "Modern (18-present)": 0.4386,
+     "Unknown": 0.1216
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-02T07-33-43",
+   "model": "gemini-3.1-pro-preview",
+   "team": "Gemini",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-02T07-33-43`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-02T07:33:43Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-02T07-33-43.csv",
+   "mean_cer": 0.4026,
+   "median_cer": 0.2724,
+   "catastrophic_pct": 41.95,
+   "coverage": 469,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.2268,
+     "digital_fonts": 0.4029,
+     "manuscripts": 0.5447,
+     "metal_types": 0.0259,
+     "modern": 0.0626,
+     "typewriters": 0.0933
+    },
+    "script": {
+     "Transitional": 0.128,
+     "Uchen": 0.1226,
+     "Uchen+Uchen": 0.2369,
+     "Uchen+Ume": 0.6051,
+     "Ume": 0.7741,
+     "Ume+Uchen": 0.7193,
+     "Ume+Ume": 0.8889
+    },
+    "script_4": {
+     "Danyig": 0.6315,
+     "Druma": 0.688,
+     "Gyuyig": 0.8179,
+     "Non-applicable": 0.2506,
+     "Pedri": 0.7856,
+     "Tsugdri": 0.7901,
+     "Uchen": 0.1252,
+     "Unknown": 0.4382
+    },
+    "legibility": {
+     "0 - Illegible": 0.4128,
+     "1 - Poor": 0.6377,
+     "2 - Fair": 0.4289,
+     "3 - Good": 0.4405,
+     "4 - Excellent": 0.3731
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2721,
+     "1 - rare": 0.273,
+     "2 - uncommon": 0.4109,
+     "3 - common": 0.4627,
+     "4 - very common": 0.2816,
+     "Unknown": 0.1636
+    },
+    "period": {
+     "Classical (12-14th c)": 0.7226,
+     "Contemporary (19-present)": 0.5607,
+     "Contemporary (20-21st C)": 0.0409,
+     "Early Classical (11-12th c.)": 0.293,
+     "Early Modern to Modern (17-present)": 0.7734,
+     "Early Modern to now (15-present)": 0.529,
+     "Early scripts (7-8th c)": 0.012,
+     "Late Classical (14-15th c.)": 0.741,
+     "Late Early (9-11th c)": 0.2432,
+     "Medieval (15)-present": 0.2301,
+     "Mid Early (8-9th c)": 0.0467,
+     "Modern (18-present)": 0.4344,
+     "Unknown": 0.1248
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-17T08-21-29",
+   "model": "PaddleOCR-VL-1.5-0.9B",
+   "team": "PaddleOCR-VL",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-17T08-21-29`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-17T08:21:29Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-17T08-21-29.csv",
+   "mean_cer": 0.4117,
+   "median_cer": 0.2259,
+   "catastrophic_pct": 35.81,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.5428,
+     "digital_fonts": 0.1041,
+     "manuscripts": 0.5837,
+     "metal_types": 0.296,
+     "modern": 0.1566,
+     "typewriters": 0.2794
+    },
+    "script": {
+     "Transitional": 0.3233,
+     "Uchen": 0.3512,
+     "Uchen+Uchen": 0.5071,
+     "Uchen+Ume": 0.3926,
+     "Ume": 0.485,
+     "Ume+Uchen": 0.7539,
+     "Ume+Ume": 0.5237
+    },
+    "script_4": {
+     "Danyig": 0.5065,
+     "Druma": 0.3877,
+     "Gyuyig": 0.6817,
+     "Non-applicable": 0.2144,
+     "Pedri": 0.3711,
+     "Tsugdri": 0.2462,
+     "Uchen": 0.3597,
+     "Unknown": 0.5171
+    },
+    "legibility": {
+     "0 - Illegible": 0.991,
+     "1 - Poor": 0.7452,
+     "2 - Fair": 0.6156,
+     "3 - Good": 0.573,
+     "4 - Excellent": 0.2986
+    },
+    "rarity": {
+     "0 - extremely rare": 0.0846,
+     "1 - rare": 0.2531,
+     "2 - uncommon": 0.3819,
+     "3 - common": 0.4587,
+     "4 - very common": 0.3575,
+     "Unknown": 0.3842
+    },
+    "period": {
+     "Classical (12-14th c)": 0.437,
+     "Contemporary (19-present)": 0.0411,
+     "Contemporary (20-21st C)": 0.0925,
+     "Early Classical (11-12th c.)": 0.497,
+     "Early Modern to Modern (17-present)": 0.429,
+     "Early Modern to now (15-present)": 0.5116,
+     "Early scripts (7-8th c)": 0.018,
+     "Late Classical (14-15th c.)": 0.3032,
+     "Late Early (9-11th c)": 0.4498,
+     "Medieval (15)-present": 0.4502,
+     "Mid Early (8-9th c)": 0.0742,
+     "Modern (18-present)": 0.4002,
+     "Unknown": 0.3994
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-06-12T12-20-38",
+   "model": "claude-fable-5",
+   "team": "Claude",
+   "training": "",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-06-12T12-20-38`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-06-12T12:20:38Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-06-12T12-20-38.csv",
+   "mean_cer": 0.4198,
+   "median_cer": 0.3893,
+   "catastrophic_pct": 44.92,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.3085,
+     "digital_fonts": 0.3884,
+     "manuscripts": 0.553,
+     "metal_types": 0.0481,
+     "modern": 0.0888,
+     "typewriters": 0.1034
+    },
+    "script": {
+     "Transitional": 0.2129,
+     "Uchen": 0.1727,
+     "Uchen+Uchen": 0.315,
+     "Uchen+Ume": 0.6283,
+     "Ume": 0.7392,
+     "Ume+Uchen": 0.9549,
+     "Ume+Ume": 0.7767
+    },
+    "script_4": {
+     "Danyig": 0.6761,
+     "Druma": 0.6572,
+     "Gyuyig": 0.7941,
+     "Non-applicable": 0.2981,
+     "Pedri": 0.721,
+     "Tsugdri": 0.7449,
+     "Uchen": 0.1748,
+     "Unknown": 0.4953
+    },
+    "legibility": {
+     "0 - Illegible": 0.4463,
+     "1 - Poor": 0.6249,
+     "2 - Fair": 0.4533,
+     "3 - Good": 0.4849,
+     "4 - Excellent": 0.379
+    },
+    "rarity": {
+     "0 - extremely rare": 0.1936,
+     "1 - rare": 0.2436,
+     "2 - uncommon": 0.4174,
+     "3 - common": 0.4789,
+     "4 - very common": 0.3095,
+     "Unknown": 0.3009
+    },
+    "period": {
+     "Classical (12-14th c)": 0.6679,
+     "Contemporary (19-present)": 0.5063,
+     "Contemporary (20-21st C)": 0.0505,
+     "Early Classical (11-12th c.)": 0.2415,
+     "Early Modern to Modern (17-present)": 0.7133,
+     "Early Modern to now (15-present)": 0.5229,
+     "Early scripts (7-8th c)": 0.0301,
+     "Late Classical (14-15th c.)": 0.675,
+     "Late Early (9-11th c)": 0.2298,
+     "Medieval (15)-present": 0.2936,
+     "Mid Early (8-9th c)": 0.0622,
+     "Modern (18-present)": 0.4558,
+     "Unknown": 0.2724
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-24T16-23-15",
+   "model": "gemini-3.5-flash",
+   "team": "Gemini",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-24T16-23-15`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-24T16:23:15Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-24T16-23-15.csv",
+   "mean_cer": 0.4388,
+   "median_cer": 0.3422,
+   "catastrophic_pct": 44.28,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.2796,
+     "digital_fonts": 0.4323,
+     "manuscripts": 0.5783,
+     "metal_types": 0.0566,
+     "modern": 0.1006,
+     "typewriters": 0.1332
+    },
+    "script": {
+     "Transitional": 0.171,
+     "Uchen": 0.1602,
+     "Uchen+Uchen": 0.3014,
+     "Uchen+Ume": 0.6774,
+     "Ume": 0.8062,
+     "Ume+Uchen": 0.7868,
+     "Ume+Ume": 0.8599
+    },
+    "script_4": {
+     "Danyig": 0.7676,
+     "Druma": 0.7535,
+     "Gyuyig": 0.8487,
+     "Non-applicable": 0.2888,
+     "Pedri": 0.7817,
+     "Tsugdri": 0.8068,
+     "Uchen": 0.1635,
+     "Unknown": 0.4901
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.6645,
+     "2 - Fair": 0.4722,
+     "3 - Good": 0.481,
+     "4 - Excellent": 0.4051
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2388,
+     "1 - rare": 0.2818,
+     "2 - uncommon": 0.4466,
+     "3 - common": 0.5017,
+     "4 - very common": 0.3186,
+     "Unknown": 0.2009
+    },
+    "period": {
+     "Classical (12-14th c)": 0.7728,
+     "Contemporary (19-present)": 0.5777,
+     "Contemporary (20-21st C)": 0.0704,
+     "Early Classical (11-12th c.)": 0.3079,
+     "Early Modern to Modern (17-present)": 0.8089,
+     "Early Modern to now (15-present)": 0.535,
+     "Early scripts (7-8th c)": 0.018,
+     "Late Classical (14-15th c.)": 0.7644,
+     "Late Early (9-11th c)": 0.2995,
+     "Medieval (15)-present": 0.2719,
+     "Mid Early (8-9th c)": 0.0897,
+     "Modern (18-present)": 0.4813,
+     "Unknown": 0.1548
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-15T21-08-47",
+   "model": "gemini-3-flash-preview",
+   "team": "Gemini",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-15T21-08-47`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-15T21:08:47Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-15T21-08-47.csv",
+   "mean_cer": 0.4451,
+   "median_cer": 0.3182,
+   "catastrophic_pct": 44.28,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.2636,
+     "digital_fonts": 0.4572,
+     "manuscripts": 0.5839,
+     "metal_types": 0.0535,
+     "modern": 0.0944,
+     "typewriters": 0.1463
+    },
+    "script": {
+     "Transitional": 0.173,
+     "Uchen": 0.1504,
+     "Uchen+Uchen": 0.2518,
+     "Uchen+Ume": 0.6664,
+     "Ume": 0.8352,
+     "Ume+Uchen": 0.9338,
+     "Ume+Ume": 0.8524
+    },
+    "script_4": {
+     "Danyig": 0.7507,
+     "Druma": 0.8046,
+     "Gyuyig": 0.8729,
+     "Non-applicable": 0.2941,
+     "Pedri": 0.8079,
+     "Tsugdri": 0.864,
+     "Uchen": 0.1537,
+     "Unknown": 0.4723
+    },
+    "legibility": {
+     "0 - Illegible": 0.7254,
+     "1 - Poor": 0.753,
+     "2 - Fair": 0.4645,
+     "3 - Good": 0.4805,
+     "4 - Excellent": 0.4137
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2088,
+     "1 - rare": 0.3009,
+     "2 - uncommon": 0.4594,
+     "3 - common": 0.5085,
+     "4 - very common": 0.3121,
+     "Unknown": 0.2226
+    },
+    "period": {
+     "Classical (12-14th c)": 0.8063,
+     "Contemporary (19-present)": 0.6043,
+     "Contemporary (20-21st C)": 0.0761,
+     "Early Classical (11-12th c.)": 0.3099,
+     "Early Modern to Modern (17-present)": 0.8206,
+     "Early Modern to now (15-present)": 0.5394,
+     "Early scripts (7-8th c)": 0.0211,
+     "Late Classical (14-15th c.)": 0.8001,
+     "Late Early (9-11th c)": 0.2839,
+     "Medieval (15)-present": 0.263,
+     "Mid Early (8-9th c)": 0.0607,
+     "Modern (18-present)": 0.5018,
+     "Unknown": 0.1578
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-10T07-40-01",
+   "model": "Easter2_woodblock_stack_appv1",
+   "team": "BDRC OCR",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-10T07-40-01`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-10T07:40:01Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-10T07-40-01.csv",
+   "mean_cer": 0.4455,
+   "median_cer": 0.3486,
+   "catastrophic_pct": 47.25,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.1474,
+     "digital_fonts": 0.4809,
+     "manuscripts": 0.6106,
+     "metal_types": 0.0968,
+     "modern": 0.1076,
+     "typewriters": 0.3602
+    },
+    "script": {
+     "Transitional": 0.2861,
+     "Uchen": 0.1614,
+     "Uchen+Uchen": 0.1291,
+     "Uchen+Ume": 0.5717,
+     "Ume": 0.8201,
+     "Ume+Uchen": 0.9359,
+     "Ume+Ume": 0.8123
+    },
+    "script_4": {
+     "Danyig": 0.7713,
+     "Druma": 0.7181,
+     "Gyuyig": 0.8859,
+     "Non-applicable": 0.3786,
+     "Pedri": 0.7903,
+     "Tsugdri": 0.8421,
+     "Uchen": 0.16,
+     "Unknown": 0.3786
+    },
+    "legibility": {
+     "0 - Illegible": 0.1527,
+     "1 - Poor": 0.4545,
+     "2 - Fair": 0.4524,
+     "3 - Good": 0.4578,
+     "4 - Excellent": 0.4399
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3881,
+     "1 - rare": 0.4186,
+     "2 - uncommon": 0.4547,
+     "3 - common": 0.5128,
+     "4 - very common": 0.2538,
+     "Unknown": 0.3715
+    },
+    "period": {
+     "Classical (12-14th c)": 0.7343,
+     "Contemporary (19-present)": 0.5395,
+     "Contemporary (20-21st C)": 0.1605,
+     "Early Classical (11-12th c.)": 0.403,
+     "Early Modern to Modern (17-present)": 0.8337,
+     "Early Modern to now (15-present)": 0.515,
+     "Early scripts (7-8th c)": 0.209,
+     "Late Classical (14-15th c.)": 0.7394,
+     "Late Early (9-11th c)": 0.2463,
+     "Medieval (15)-present": 0.2435,
+     "Mid Early (8-9th c)": 0.2879,
+     "Modern (18-present)": 0.5321,
+     "Unknown": 0.3373
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-03T14-32-18",
+   "model": "gemini-3.1-flash-lite-preview",
+   "team": "Gemini",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-03T14-32-18`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-03T14:32:18Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-03T14-32-18.csv",
+   "mean_cer": 0.4747,
+   "median_cer": 0.464,
+   "catastrophic_pct": 48.73,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.411,
+     "digital_fonts": 0.4432,
+     "manuscripts": 0.5861,
+     "metal_types": 0.0972,
+     "modern": 0.1436,
+     "typewriters": 0.229
+    },
+    "script": {
+     "Transitional": 0.2932,
+     "Uchen": 0.2572,
+     "Uchen+Uchen": 0.409,
+     "Uchen+Ume": 0.7343,
+     "Ume": 0.7552,
+     "Ume+Uchen": 0.824,
+     "Ume+Ume": 0.7332
+    },
+    "script_4": {
+     "Danyig": 0.7209,
+     "Druma": 0.746,
+     "Gyuyig": 0.7804,
+     "Non-applicable": 0.348,
+     "Pedri": 0.7494,
+     "Tsugdri": 0.7434,
+     "Uchen": 0.2611,
+     "Unknown": 0.548
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.6571,
+     "2 - Fair": 0.5669,
+     "3 - Good": 0.5298,
+     "4 - Excellent": 0.429
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2669,
+     "1 - rare": 0.3483,
+     "2 - uncommon": 0.4635,
+     "3 - common": 0.5231,
+     "4 - very common": 0.3986,
+     "Unknown": 0.3424
+    },
+    "period": {
+     "Classical (12-14th c)": 0.793,
+     "Contemporary (19-present)": 0.5046,
+     "Contemporary (20-21st C)": 0.1184,
+     "Early Classical (11-12th c.)": 0.3716,
+     "Early Modern to Modern (17-present)": 0.7534,
+     "Early Modern to now (15-present)": 0.563,
+     "Early scripts (7-8th c)": 0.0797,
+     "Late Classical (14-15th c.)": 0.7676,
+     "Late Early (9-11th c)": 0.4048,
+     "Medieval (15)-present": 0.3633,
+     "Mid Early (8-9th c)": 0.138,
+     "Modern (18-present)": 0.4639,
+     "Unknown": 0.2968
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-08T14-59-10",
+   "model": "claude-opus-4-7",
+   "team": "Claude",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-08T14-59-10`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-08T14:59:10Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-08T14-59-10.csv",
+   "mean_cer": 0.534,
+   "median_cer": 0.6555,
+   "catastrophic_pct": 65.25,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.5856,
+     "digital_fonts": 0.4427,
+     "manuscripts": 0.6391,
+     "metal_types": 0.1237,
+     "modern": 0.1733,
+     "typewriters": 0.2502
+    },
+    "script": {
+     "Transitional": 0.4344,
+     "Uchen": 0.3845,
+     "Uchen+Uchen": 0.5676,
+     "Uchen+Ume": 0.682,
+     "Ume": 0.72,
+     "Ume+Uchen": 0.7114,
+     "Ume+Ume": 0.7305
+    },
+    "script_4": {
+     "Danyig": 0.7234,
+     "Druma": 0.6925,
+     "Gyuyig": 0.7385,
+     "Non-applicable": 0.4615,
+     "Pedri": 0.7123,
+     "Tsugdri": 0.7113,
+     "Uchen": 0.3884,
+     "Unknown": 0.6236
+    },
+    "legibility": {
+     "0 - Illegible": 0.6649,
+     "1 - Poor": 0.7281,
+     "2 - Fair": 0.6044,
+     "3 - Good": 0.6105,
+     "4 - Excellent": 0.4832
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2961,
+     "1 - rare": 0.3466,
+     "2 - uncommon": 0.5017,
+     "3 - common": 0.5759,
+     "4 - very common": 0.4913,
+     "Unknown": 0.56
+    },
+    "period": {
+     "Classical (12-14th c)": 0.7084,
+     "Contemporary (19-present)": 0.5651,
+     "Contemporary (20-21st C)": 0.1392,
+     "Early Classical (11-12th c.)": 0.4086,
+     "Early Modern to Modern (17-present)": 0.7182,
+     "Early Modern to now (15-present)": 0.5921,
+     "Early scripts (7-8th c)": 0.0827,
+     "Late Classical (14-15th c.)": 0.6994,
+     "Late Early (9-11th c)": 0.4791,
+     "Medieval (15)-present": 0.508,
+     "Mid Early (8-9th c)": 0.224,
+     "Modern (18-present)": 0.4762,
+     "Unknown": 0.5466
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-28T18-44-47",
+   "model": "claude-opus-4-8",
+   "team": "Claude",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-28T18-44-47`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-28T18:44:47Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-28T18-44-47.csv",
+   "mean_cer": 0.5508,
+   "median_cer": 0.6539,
+   "catastrophic_pct": 64.83,
+   "coverage": 454,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.5897,
+     "digital_fonts": 0.4602,
+     "manuscripts": 0.6582,
+     "metal_types": 0.1319,
+     "modern": 0.2424,
+     "typewriters": 0.2368
+    },
+    "script": {
+     "Transitional": 0.4627,
+     "Uchen": 0.3909,
+     "Uchen+Uchen": 0.5968,
+     "Uchen+Ume": 0.7178,
+     "Ume": 0.7475,
+     "Ume+Uchen": 0.7162,
+     "Ume+Ume": 0.7437
+    },
+    "script_4": {
+     "Danyig": 0.7331,
+     "Druma": 0.7347,
+     "Gyuyig": 0.7674,
+     "Non-applicable": 0.4835,
+     "Pedri": 0.7406,
+     "Tsugdri": 0.731,
+     "Uchen": 0.3947,
+     "Unknown": 0.6489
+    },
+    "legibility": {
+     "0 - Illegible": 0.6938,
+     "1 - Poor": 0.7382,
+     "2 - Fair": 0.6291,
+     "3 - Good": 0.6185,
+     "4 - Excellent": 0.5028
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3127,
+     "1 - rare": 0.3702,
+     "2 - uncommon": 0.5176,
+     "3 - common": 0.5966,
+     "4 - very common": 0.498,
+     "Unknown": 0.5646
+    },
+    "period": {
+     "Classical (12-14th c)": 0.7539,
+     "Contemporary (19-present)": 0.5802,
+     "Contemporary (20-21st C)": 0.1444,
+     "Early Classical (11-12th c.)": 0.4163,
+     "Early Modern to Modern (17-present)": 0.7679,
+     "Early Modern to now (15-present)": 0.6175,
+     "Early scripts (7-8th c)": 0.1158,
+     "Late Classical (14-15th c.)": 0.7206,
+     "Late Early (9-11th c)": 0.4736,
+     "Medieval (15)-present": 0.5208,
+     "Mid Early (8-9th c)": 0.2454,
+     "Modern (18-present)": 0.4814,
+     "Unknown": 0.5478
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-23T10-15-10",
+   "model": "model",
+   "team": "dots_mocr",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-23T10-15-10`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-23T10:15:10Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-23T10-15-10.csv",
+   "mean_cer": 0.5553,
+   "median_cer": 0.6081,
+   "catastrophic_pct": 51.06,
+   "coverage": 398,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.3845,
+     "digital_fonts": 0.5378,
+     "manuscripts": 0.7229,
+     "metal_types": 0.103,
+     "modern": 0.0846,
+     "typewriters": 0.2578
+    },
+    "script": {
+     "Transitional": 0.3615,
+     "Uchen": 0.2253,
+     "Uchen+Uchen": 0.2247,
+     "Uchen+Ume": 1.0,
+     "Ume": 0.9853,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 1.0,
+     "Druma": 0.9669,
+     "Gyuyig": 1.0,
+     "Non-applicable": 0.408,
+     "Pedri": 1.0,
+     "Tsugdri": 1.0,
+     "Uchen": 0.2297,
+     "Unknown": 0.5348
+    },
+    "legibility": {
+     "0 - Illegible": 0.4788,
+     "1 - Poor": 0.7429,
+     "2 - Fair": 0.6305,
+     "3 - Good": 0.5885,
+     "4 - Excellent": 0.523
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2931,
+     "1 - rare": 0.3801,
+     "2 - uncommon": 0.5626,
+     "3 - common": 0.6174,
+     "4 - very common": 0.4207,
+     "Unknown": 0.4681
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9758,
+     "Contemporary (19-present)": 0.5578,
+     "Contemporary (20-21st C)": 0.0537,
+     "Early Classical (11-12th c.)": 0.4942,
+     "Early Modern to Modern (17-present)": 1.0,
+     "Early Modern to now (15-present)": 0.6104,
+     "Early scripts (7-8th c)": 0.0286,
+     "Late Classical (14-15th c.)": 1.0,
+     "Late Early (9-11th c)": 0.3598,
+     "Medieval (15)-present": 0.3743,
+     "Mid Early (8-9th c)": 0.0719,
+     "Modern (18-present)": 0.5782,
+     "Unknown": 0.4238
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-18T08-11-34",
+   "model": "Tibetan Generic 0.1",
+   "team": "transkribus",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-18T08-11-34`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-18T08:11:34Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-18T08-11-34.csv",
+   "mean_cer": 0.5559,
+   "median_cer": 0.4459,
+   "catastrophic_pct": 49.36,
+   "coverage": 259,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.2087,
+     "digital_fonts": 0.6409,
+     "manuscripts": 0.7295,
+     "metal_types": 0.1454,
+     "modern": 0.1559,
+     "typewriters": 0.1107
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 0.1766,
+     "Uchen+Uchen": 0.2601,
+     "Uchen+Ume": 0.3637,
+     "Ume": 0.9909,
+     "Ume+Uchen": 0.4359,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 1.0,
+     "Druma": 1.0,
+     "Gyuyig": 1.0,
+     "Non-applicable": 0.732,
+     "Pedri": 0.9642,
+     "Tsugdri": 1.0,
+     "Uchen": 0.2003,
+     "Unknown": 0.4042
+    },
+    "legibility": {
+     "0 - Illegible": 0.3126,
+     "1 - Poor": 0.5277,
+     "2 - Fair": 0.5272,
+     "3 - Good": 0.5535,
+     "4 - Excellent": 0.5629
+    },
+    "rarity": {
+     "0 - extremely rare": 0.753,
+     "1 - rare": 0.3591,
+     "2 - uncommon": 0.6083,
+     "3 - common": 0.6115,
+     "4 - very common": 0.3095,
+     "Unknown": 0.8578
+    },
+    "period": {
+     "Classical (12-14th c)": 1.0,
+     "Contemporary (19-present)": 0.8255,
+     "Contemporary (20-21st C)": 0.1674,
+     "Early Classical (11-12th c.)": 1.0,
+     "Early Modern to Modern (17-present)": 0.9627,
+     "Early Modern to now (15-present)": 0.6088,
+     "Early scripts (7-8th c)": 0.012,
+     "Late Classical (14-15th c.)": 1.0,
+     "Late Early (9-11th c)": 0.254,
+     "Medieval (15)-present": 0.2869,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.602,
+     "Unknown": 0.8459
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-02T00-00-01",
+   "model": "Easter2_ume_druma_appv1",
+   "team": "BDRC OCR",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-02T00-00-01`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-02T00:00:01Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-02T00-00-01.csv",
+   "mean_cer": 0.5695,
+   "median_cer": 0.5959,
+   "catastrophic_pct": 68.86,
+   "coverage": 464,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.6688,
+     "digital_fonts": 0.4699,
+     "manuscripts": 0.5691,
+     "metal_types": 0.6896,
+     "modern": 0.66,
+     "typewriters": 0.7106
+    },
+    "script": {
+     "Transitional": 0.5281,
+     "Uchen": 0.6547,
+     "Uchen+Uchen": 0.6211,
+     "Uchen+Ume": 0.5369,
+     "Ume": 0.4653,
+     "Ume+Uchen": 0.5964,
+     "Ume+Ume": 0.6054
+    },
+    "script_4": {
+     "Danyig": 0.3869,
+     "Druma": 0.2241,
+     "Gyuyig": 0.6156,
+     "Non-applicable": 0.5388,
+     "Pedri": 0.3612,
+     "Tsugdri": 0.5409,
+     "Uchen": 0.6476,
+     "Unknown": 0.6037
+    },
+    "legibility": {
+     "0 - Illegible": 0.664,
+     "1 - Poor": 0.7642,
+     "2 - Fair": 0.6746,
+     "3 - Good": 0.6173,
+     "4 - Excellent": 0.5258
+    },
+    "rarity": {
+     "0 - extremely rare": 0.4423,
+     "1 - rare": 0.583,
+     "2 - uncommon": 0.5226,
+     "3 - common": 0.5796,
+     "4 - very common": 0.5895,
+     "Unknown": 0.6322
+    },
+    "period": {
+     "Classical (12-14th c)": 0.1683,
+     "Contemporary (19-present)": 0.3269,
+     "Contemporary (20-21st C)": 0.6311,
+     "Early Classical (11-12th c.)": 0.4587,
+     "Early Modern to Modern (17-present)": 0.4847,
+     "Early Modern to now (15-present)": 0.5654,
+     "Early scripts (7-8th c)": 0.4962,
+     "Late Classical (14-15th c.)": 0.285,
+     "Late Early (9-11th c)": 0.5016,
+     "Medieval (15)-present": 0.6452,
+     "Mid Early (8-9th c)": 0.4525,
+     "Modern (18-present)": 0.6462,
+     "Unknown": 0.6527
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-06-01T11-38-42",
+   "model": "tesseract-5.3.0-bod_uchen",
+   "team": "Tesseract",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-06-01T11-38-42`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-06-01T11:38:42Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-06-01T11-38-42.csv",
+   "mean_cer": 0.5829,
+   "median_cer": 0.7052,
+   "catastrophic_pct": 63.35,
+   "coverage": 471,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.5733,
+     "digital_fonts": 0.5373,
+     "manuscripts": 0.69,
+     "metal_types": 0.184,
+     "modern": 0.1471,
+     "typewriters": 0.3346
+    },
+    "script": {
+     "Transitional": 0.3982,
+     "Uchen": 0.3909,
+     "Uchen+Uchen": 0.4879,
+     "Uchen+Ume": 0.6565,
+     "Ume": 0.8385,
+     "Ume+Uchen": 0.7924,
+     "Ume+Ume": 0.8393
+    },
+    "script_4": {
+     "Danyig": 0.8018,
+     "Druma": 0.8352,
+     "Gyuyig": 0.8589,
+     "Non-applicable": 0.48,
+     "Pedri": 0.8003,
+     "Tsugdri": 0.8915,
+     "Uchen": 0.3931,
+     "Unknown": 0.5964
+    },
+    "legibility": {
+     "0 - Illegible": 0.6856,
+     "1 - Poor": 0.7244,
+     "2 - Fair": 0.6268,
+     "3 - Good": 0.6445,
+     "4 - Excellent": 0.5445
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3814,
+     "1 - rare": 0.4576,
+     "2 - uncommon": 0.5522,
+     "3 - common": 0.643,
+     "4 - very common": 0.4861,
+     "Unknown": 0.5096
+    },
+    "period": {
+     "Classical (12-14th c)": 0.8152,
+     "Contemporary (19-present)": 0.7039,
+     "Contemporary (20-21st C)": 0.2026,
+     "Early Classical (11-12th c.)": 0.4086,
+     "Early Modern to Modern (17-present)": 0.8637,
+     "Early Modern to now (15-present)": 0.6294,
+     "Early scripts (7-8th c)": 0.1323,
+     "Late Classical (14-15th c.)": 0.7807,
+     "Late Early (9-11th c)": 0.4678,
+     "Medieval (15)-present": 0.5153,
+     "Mid Early (8-9th c)": 0.2403,
+     "Modern (18-present)": 0.5539,
+     "Unknown": 0.4878
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-22T15-00-30",
+   "model": "Qwen3.5-397B-A17B",
+   "team": "Qwen35",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-22T15-00-30`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-22T15:00:30Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-22T15-00-30.csv",
+   "mean_cer": 0.5843,
+   "median_cer": 0.7056,
+   "catastrophic_pct": 54.24,
+   "coverage": 292,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.5441,
+     "digital_fonts": 0.555,
+     "manuscripts": 0.6936,
+     "metal_types": 0.1484,
+     "modern": 0.1979,
+     "typewriters": 0.3239
+    },
+    "script": {
+     "Transitional": 0.3115,
+     "Uchen": 0.322,
+     "Uchen+Uchen": 0.6176,
+     "Uchen+Ume": 0.8583,
+     "Ume": 0.9226,
+     "Ume+Uchen": 0.8744,
+     "Ume+Ume": 0.9392
+    },
+    "script_4": {
+     "Danyig": 0.965,
+     "Druma": 0.9678,
+     "Gyuyig": 0.9201,
+     "Non-applicable": 0.4337,
+     "Pedri": 0.8908,
+     "Tsugdri": 0.9369,
+     "Uchen": 0.3251,
+     "Unknown": 0.7276
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.7085,
+     "2 - Fair": 0.6296,
+     "3 - Good": 0.6516,
+     "4 - Excellent": 0.5428
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3338,
+     "1 - rare": 0.4726,
+     "2 - uncommon": 0.5673,
+     "3 - common": 0.6355,
+     "4 - very common": 0.5085,
+     "Unknown": 0.4359
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9771,
+     "Contemporary (19-present)": 0.7115,
+     "Contemporary (20-21st C)": 0.1286,
+     "Early Classical (11-12th c.)": 0.3239,
+     "Early Modern to Modern (17-present)": 0.9213,
+     "Early Modern to now (15-present)": 0.7153,
+     "Early scripts (7-8th c)": 0.0917,
+     "Late Classical (14-15th c.)": 0.9462,
+     "Late Early (9-11th c)": 0.4516,
+     "Medieval (15)-present": 0.4531,
+     "Mid Early (8-9th c)": 0.1217,
+     "Modern (18-present)": 0.561,
+     "Unknown": 0.3958
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-02T00-00-02",
+   "model": "Easter2_ume_petsuk_appv1",
+   "team": "BDRC OCR",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-02T00-00-02`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-02T00:00:02Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-02T00-00-02.csv",
+   "mean_cer": 0.6114,
+   "median_cer": 0.6685,
+   "catastrophic_pct": 76.91,
+   "coverage": 464,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.7348,
+     "digital_fonts": 0.5321,
+     "manuscripts": 0.5882,
+     "metal_types": 0.7074,
+     "modern": 0.7304,
+     "typewriters": 0.7126
+    },
+    "script": {
+     "Transitional": 0.6663,
+     "Uchen": 0.7255,
+     "Uchen+Uchen": 0.6702,
+     "Uchen+Ume": 0.543,
+     "Ume": 0.4632,
+     "Ume+Uchen": 0.578,
+     "Ume+Ume": 0.5639
+    },
+    "script_4": {
+     "Danyig": 0.3998,
+     "Druma": 0.3633,
+     "Gyuyig": 0.5858,
+     "Non-applicable": 0.6669,
+     "Pedri": 0.2989,
+     "Tsugdri": 0.5263,
+     "Uchen": 0.7209,
+     "Unknown": 0.626
+    },
+    "legibility": {
+     "0 - Illegible": 0.6874,
+     "1 - Poor": 0.7737,
+     "2 - Fair": 0.7039,
+     "3 - Good": 0.6564,
+     "4 - Excellent": 0.5721
+    },
+    "rarity": {
+     "0 - extremely rare": 0.6569,
+     "1 - rare": 0.6515,
+     "2 - uncommon": 0.5923,
+     "3 - common": 0.603,
+     "4 - very common": 0.6339,
+     "Unknown": 0.7125
+    },
+    "period": {
+     "Classical (12-14th c)": 0.3198,
+     "Contemporary (19-present)": 0.5383,
+     "Contemporary (20-21st C)": 0.7187,
+     "Early Classical (11-12th c.)": 0.6007,
+     "Early Modern to Modern (17-present)": 0.4745,
+     "Early Modern to now (15-present)": 0.5657,
+     "Early scripts (7-8th c)": 0.6496,
+     "Late Classical (14-15th c.)": 0.2003,
+     "Late Early (9-11th c)": 0.636,
+     "Medieval (15)-present": 0.7055,
+     "Mid Early (8-9th c)": 0.7529,
+     "Modern (18-present)": 0.6672,
+     "Unknown": 0.7448
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-07-19T10-40-05",
+   "model": "mistral-ocr-4-0",
+   "team": "MistralOCR",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-07-19T10-40-05`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-07-19T10:40:05Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-07-19T10-40-05.csv",
+   "mean_cer": 0.6322,
+   "median_cer": 0.916,
+   "catastrophic_pct": 60.81,
+   "coverage": 466,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.5096,
+     "digital_fonts": 0.5525,
+     "manuscripts": 0.8139,
+     "metal_types": 0.0509,
+     "modern": 0.3112,
+     "typewriters": 0.4537
+    },
+    "script": {
+     "Transitional": 0.5071,
+     "Uchen": 0.345,
+     "Uchen+Uchen": 0.648,
+     "Uchen+Ume": 0.9562,
+     "Ume": 0.9845,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 0.9991
+    },
+    "script_4": {
+     "Danyig": 0.9556,
+     "Druma": 0.9621,
+     "Gyuyig": 0.9998,
+     "Non-applicable": 0.603,
+     "Pedri": 0.982,
+     "Tsugdri": 0.9869,
+     "Uchen": 0.344,
+     "Unknown": 0.7821
+    },
+    "legibility": {
+     "0 - Illegible": 0.3234,
+     "1 - Poor": 0.7923,
+     "2 - Fair": 0.6762,
+     "3 - Good": 0.6979,
+     "4 - Excellent": 0.5926
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3179,
+     "1 - rare": 0.5064,
+     "2 - uncommon": 0.5678,
+     "3 - common": 0.7125,
+     "4 - very common": 0.4954,
+     "Unknown": 0.7265
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9525,
+     "Contemporary (19-present)": 0.7463,
+     "Contemporary (20-21st C)": 0.0943,
+     "Early Classical (11-12th c.)": 0.4461,
+     "Early Modern to Modern (17-present)": 0.9925,
+     "Early Modern to now (15-present)": 0.7288,
+     "Early scripts (7-8th c)": 0.0195,
+     "Late Classical (14-15th c.)": 0.9624,
+     "Late Early (9-11th c)": 0.3633,
+     "Medieval (15)-present": 0.5193,
+     "Mid Early (8-9th c)": 0.126,
+     "Modern (18-present)": 0.5965,
+     "Unknown": 0.7037
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-10T18-11-21",
+   "model": "tencent/HunyuanOCR",
+   "team": "HunyuanOCR",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-10T18-11-21`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-10T18:11:21Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-10T18-11-21.csv",
+   "mean_cer": 0.6503,
+   "median_cer": 1.0,
+   "catastrophic_pct": 62.5,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.5807,
+     "digital_fonts": 0.5773,
+     "manuscripts": 0.8043,
+     "metal_types": 0.2502,
+     "modern": 0.2608,
+     "typewriters": 0.1055
+    },
+    "script": {
+     "Transitional": 0.5519,
+     "Uchen": 0.3665,
+     "Uchen+Uchen": 0.6608,
+     "Uchen+Ume": 1.0,
+     "Ume": 0.996,
+     "Ume+Uchen": 0.9791,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 0.9926,
+     "Druma": 0.9986,
+     "Gyuyig": 0.9963,
+     "Non-applicable": 0.6359,
+     "Pedri": 0.9951,
+     "Tsugdri": 0.9948,
+     "Uchen": 0.3668,
+     "Unknown": 0.7944
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.8846,
+     "2 - Fair": 0.6833,
+     "3 - Good": 0.7219,
+     "4 - Excellent": 0.6045
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3065,
+     "1 - rare": 0.412,
+     "2 - uncommon": 0.6399,
+     "3 - common": 0.7063,
+     "4 - very common": 0.5351,
+     "Unknown": 0.7994
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9985,
+     "Contemporary (19-present)": 0.7812,
+     "Contemporary (20-21st C)": 0.2169,
+     "Early Classical (11-12th c.)": 0.5216,
+     "Early Modern to Modern (17-present)": 0.9932,
+     "Early Modern to now (15-present)": 0.7211,
+     "Early scripts (7-8th c)": 0.0331,
+     "Late Classical (14-15th c.)": 0.9948,
+     "Late Early (9-11th c)": 0.5115,
+     "Medieval (15)-present": 0.5262,
+     "Mid Early (8-9th c)": 0.0964,
+     "Modern (18-present)": 0.6023,
+     "Unknown": 0.7827
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T15-32-00",
+   "model": "tesseract-5.3.0-bod",
+   "team": "Tesseract",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T15-32-00`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T15:32:00Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T15-32-00.csv",
+   "mean_cer": 0.6658,
+   "median_cer": 0.7944,
+   "catastrophic_pct": 71.4,
+   "coverage": 471,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.7338,
+     "digital_fonts": 0.5406,
+     "manuscripts": 0.8063,
+     "metal_types": 0.1935,
+     "modern": 0.1268,
+     "typewriters": 0.3246
+    },
+    "script": {
+     "Transitional": 0.556,
+     "Uchen": 0.4841,
+     "Uchen+Uchen": 0.61,
+     "Uchen+Ume": 0.7663,
+     "Ume": 0.8969,
+     "Ume+Uchen": 0.9516,
+     "Ume+Ume": 0.9202
+    },
+    "script_4": {
+     "Danyig": 0.912,
+     "Druma": 0.8841,
+     "Gyuyig": 0.9301,
+     "Non-applicable": 0.5776,
+     "Pedri": 0.8847,
+     "Tsugdri": 0.8035,
+     "Uchen": 0.4914,
+     "Unknown": 0.7141
+    },
+    "legibility": {
+     "0 - Illegible": 0.8446,
+     "1 - Poor": 0.8478,
+     "2 - Fair": 0.7528,
+     "3 - Good": 0.7598,
+     "4 - Excellent": 0.6055
+    },
+    "rarity": {
+     "0 - extremely rare": 0.4901,
+     "1 - rare": 0.4749,
+     "2 - uncommon": 0.6054,
+     "3 - common": 0.7317,
+     "4 - very common": 0.5901,
+     "Unknown": 0.6482
+    },
+    "period": {
+     "Classical (12-14th c)": 0.877,
+     "Contemporary (19-present)": 0.7498,
+     "Contemporary (20-21st C)": 0.1689,
+     "Early Classical (11-12th c.)": 0.5774,
+     "Early Modern to Modern (17-present)": 0.8871,
+     "Early Modern to now (15-present)": 0.7322,
+     "Early scripts (7-8th c)": 0.215,
+     "Late Classical (14-15th c.)": 0.8965,
+     "Late Early (9-11th c)": 0.5783,
+     "Medieval (15)-present": 0.6439,
+     "Mid Early (8-9th c)": 0.4272,
+     "Modern (18-present)": 0.5711,
+     "Unknown": 0.6277
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-22T18-06-32",
+   "model": "rednote-hilab/dots.ocr",
+   "team": "dots",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-22T18-06-32`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-22T18:06:32Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-22T18-06-32.csv",
+   "mean_cer": 0.6671,
+   "median_cer": 1.0,
+   "catastrophic_pct": 63.35,
+   "coverage": 393,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.6445,
+     "digital_fonts": 0.5699,
+     "manuscripts": 0.811,
+     "metal_types": 0.2833,
+     "modern": 0.2178,
+     "typewriters": 0.4784
+    },
+    "script": {
+     "Transitional": 0.6912,
+     "Uchen": 0.3835,
+     "Uchen+Uchen": 0.7507,
+     "Uchen+Ume": 0.8893,
+     "Ume": 0.9969,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 1.0,
+     "Druma": 1.0,
+     "Gyuyig": 0.9973,
+     "Non-applicable": 0.7171,
+     "Pedri": 1.0,
+     "Tsugdri": 1.0,
+     "Uchen": 0.3834,
+     "Unknown": 0.8338
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.8846,
+     "2 - Fair": 0.7537,
+     "3 - Good": 0.7469,
+     "4 - Excellent": 0.6108
+    },
+    "rarity": {
+     "0 - extremely rare": 0.7609,
+     "1 - rare": 0.4742,
+     "2 - uncommon": 0.6283,
+     "3 - common": 0.7209,
+     "4 - very common": 0.5593,
+     "Unknown": 0.841
+    },
+    "period": {
+     "Classical (12-14th c)": 1.0,
+     "Contemporary (19-present)": 0.7387,
+     "Contemporary (20-21st C)": 0.0774,
+     "Early Classical (11-12th c.)": 0.509,
+     "Early Modern to Modern (17-present)": 1.0,
+     "Early Modern to now (15-present)": 0.7511,
+     "Early scripts (7-8th c)": 0.0436,
+     "Late Classical (14-15th c.)": 1.0,
+     "Late Early (9-11th c)": 0.365,
+     "Medieval (15)-present": 0.562,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.6199,
+     "Unknown": 0.8278
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-07T14-23-34",
+   "model": "Pagan Tibet Ume6",
+   "team": "transkribus",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-07T14-23-34`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-07T14:23:34Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-07T14-23-34.csv",
+   "mean_cer": 0.7178,
+   "median_cer": 1.0,
+   "catastrophic_pct": 67.37,
+   "coverage": 180,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 0.5899,
+     "manuscripts": 0.6284,
+     "metal_types": 1.0,
+     "modern": 0.9437,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 1.0,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 0.8383,
+     "Ume": 0.3261,
+     "Ume+Uchen": 0.6533,
+     "Ume+Ume": 0.3543
+    },
+    "script_4": {
+     "Danyig": 0.207,
+     "Druma": 0.119,
+     "Gyuyig": 0.4802,
+     "Non-applicable": 0.796,
+     "Pedri": 0.2372,
+     "Tsugdri": 0.3325,
+     "Uchen": 1.0,
+     "Unknown": 0.8442
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.916,
+     "2 - Fair": 0.8757,
+     "3 - Good": 0.7775,
+     "4 - Excellent": 0.6609
+    },
+    "rarity": {
+     "0 - extremely rare": 0.8148,
+     "1 - rare": 0.8101,
+     "2 - uncommon": 0.6495,
+     "3 - common": 0.669,
+     "4 - very common": 0.8892,
+     "Unknown": 0.9379
+    },
+    "period": {
+     "Classical (12-14th c)": 0.1088,
+     "Contemporary (19-present)": 0.3225,
+     "Contemporary (20-21st C)": 1.0,
+     "Early Classical (11-12th c.)": 0.8434,
+     "Early Modern to Modern (17-present)": 0.4287,
+     "Early Modern to now (15-present)": 0.6174,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.1224,
+     "Late Early (9-11th c)": 0.8661,
+     "Medieval (15)-present": 0.9227,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.7333,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-03-17T14-23-34",
+   "model": "Pagan Tibet Ume4",
+   "team": "transkribus",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-03-17T14-23-34`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-03-17T14:23:34Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-17T14-23-34.csv",
+   "mean_cer": 0.7268,
+   "median_cer": 1.0,
+   "catastrophic_pct": 68.43,
+   "coverage": 180,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 0.5967,
+     "manuscripts": 0.6443,
+     "metal_types": 1.0,
+     "modern": 0.9442,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 1.0,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 0.8499,
+     "Ume": 0.347,
+     "Ume+Uchen": 0.666,
+     "Ume+Ume": 0.4047
+    },
+    "script_4": {
+     "Danyig": 0.2257,
+     "Druma": 0.1287,
+     "Gyuyig": 0.5096,
+     "Non-applicable": 0.8002,
+     "Pedri": 0.2552,
+     "Tsugdri": 0.3437,
+     "Uchen": 1.0,
+     "Unknown": 0.8548
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9267,
+     "2 - Fair": 0.8822,
+     "3 - Good": 0.7888,
+     "4 - Excellent": 0.6692
+    },
+    "rarity": {
+     "0 - extremely rare": 0.816,
+     "1 - rare": 0.8136,
+     "2 - uncommon": 0.6588,
+     "3 - common": 0.6817,
+     "4 - very common": 0.8896,
+     "Unknown": 0.9379
+    },
+    "period": {
+     "Classical (12-14th c)": 0.1175,
+     "Contemporary (19-present)": 0.3334,
+     "Contemporary (20-21st C)": 1.0,
+     "Early Classical (11-12th c.)": 0.8484,
+     "Early Modern to Modern (17-present)": 0.4434,
+     "Early Modern to now (15-present)": 0.6365,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.1334,
+     "Late Early (9-11th c)": 0.8686,
+     "Medieval (15)-present": 0.9268,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.7463,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-06-03T11-53-09",
+   "model": "Pagan Tibet Ume7",
+   "team": "transkribus",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-06-03T11-53-09`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-06-03T11:53:09Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-06-03T11-53-09.csv",
+   "mean_cer": 0.7276,
+   "median_cer": 1.0,
+   "catastrophic_pct": 68.64,
+   "coverage": 180,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 0.6154,
+     "manuscripts": 0.6343,
+     "metal_types": 1.0,
+     "modern": 0.9432,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 1.0,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 0.8457,
+     "Ume": 0.3494,
+     "Ume+Uchen": 0.6444,
+     "Ume+Ume": 0.396
+    },
+    "script_4": {
+     "Danyig": 0.2241,
+     "Druma": 0.187,
+     "Gyuyig": 0.4839,
+     "Non-applicable": 0.8098,
+     "Pedri": 0.242,
+     "Tsugdri": 0.4128,
+     "Uchen": 1.0,
+     "Unknown": 0.8507
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9231,
+     "2 - Fair": 0.8838,
+     "3 - Good": 0.7809,
+     "4 - Excellent": 0.6738
+    },
+    "rarity": {
+     "0 - extremely rare": 0.9691,
+     "1 - rare": 0.8256,
+     "2 - uncommon": 0.676,
+     "3 - common": 0.6734,
+     "4 - very common": 0.8885,
+     "Unknown": 0.9365
+    },
+    "period": {
+     "Classical (12-14th c)": 0.1661,
+     "Contemporary (19-present)": 0.3385,
+     "Contemporary (20-21st C)": 1.0,
+     "Early Classical (11-12th c.)": 0.855,
+     "Early Modern to Modern (17-present)": 0.4511,
+     "Early Modern to now (15-present)": 0.622,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.1304,
+     "Late Early (9-11th c)": 0.8673,
+     "Medieval (15)-present": 0.9229,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.753,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T06-53-51",
+   "model": "claude-haiku-4-5",
+   "team": "Claude",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T06-53-51`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T06:53:51Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T06-53-51.csv",
+   "mean_cer": 0.742,
+   "median_cer": 0.7294,
+   "catastrophic_pct": 91.1,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.7956,
+     "digital_fonts": 0.6626,
+     "manuscripts": 0.791,
+     "metal_types": 0.6081,
+     "modern": 0.6238,
+     "typewriters": 0.6863
+    },
+    "script": {
+     "Transitional": 0.7563,
+     "Uchen": 0.7044,
+     "Uchen+Uchen": 0.7582,
+     "Uchen+Ume": 0.8622,
+     "Ume": 0.783,
+     "Ume+Uchen": 0.8581,
+     "Ume+Ume": 0.7213
+    },
+    "script_4": {
+     "Danyig": 0.8042,
+     "Druma": 0.8271,
+     "Gyuyig": 0.7765,
+     "Non-applicable": 0.7238,
+     "Pedri": 0.7761,
+     "Tsugdri": 0.7624,
+     "Uchen": 0.7086,
+     "Unknown": 0.7783
+    },
+    "legibility": {
+     "0 - Illegible": 0.7362,
+     "1 - Poor": 0.8171,
+     "2 - Fair": 0.7834,
+     "3 - Good": 0.774,
+     "4 - Excellent": 0.7194
+    },
+    "rarity": {
+     "0 - extremely rare": 0.837,
+     "1 - rare": 0.6899,
+     "2 - uncommon": 0.7285,
+     "3 - common": 0.742,
+     "4 - very common": 0.7551,
+     "Unknown": 0.7955
+    },
+    "period": {
+     "Classical (12-14th c)": 0.8604,
+     "Contemporary (19-present)": 0.7168,
+     "Contemporary (20-21st C)": 0.4883,
+     "Early Classical (11-12th c.)": 0.7067,
+     "Early Modern to Modern (17-present)": 0.7793,
+     "Early Modern to now (15-present)": 0.7558,
+     "Early scripts (7-8th c)": 0.7955,
+     "Late Classical (14-15th c.)": 0.7715,
+     "Late Early (9-11th c)": 0.8291,
+     "Medieval (15)-present": 0.7549,
+     "Mid Early (8-9th c)": 0.8817,
+     "Modern (18-present)": 0.6944,
+     "Unknown": 0.8022
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-08T14-59-16",
+   "model": "claude-sonnet-4-6",
+   "team": "Claude",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-08T14-59-16`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-08T14:59:16Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-08T14-59-16.csv",
+   "mean_cer": 0.7586,
+   "median_cer": 0.7744,
+   "catastrophic_pct": 83.05,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.825,
+     "digital_fonts": 0.7,
+     "manuscripts": 0.8067,
+     "metal_types": 0.5189,
+     "modern": 0.5404,
+     "typewriters": 0.6502
+    },
+    "script": {
+     "Transitional": 0.7415,
+     "Uchen": 0.6714,
+     "Uchen+Uchen": 0.868,
+     "Uchen+Ume": 0.9132,
+     "Ume": 0.8567,
+     "Ume+Uchen": 0.8377,
+     "Ume+Ume": 0.8331
+    },
+    "script_4": {
+     "Danyig": 0.8608,
+     "Druma": 0.885,
+     "Gyuyig": 0.8167,
+     "Non-applicable": 0.7208,
+     "Pedri": 0.8726,
+     "Tsugdri": 0.9025,
+     "Uchen": 0.6801,
+     "Unknown": 0.8665
+    },
+    "legibility": {
+     "0 - Illegible": 0.6883,
+     "1 - Poor": 0.8434,
+     "2 - Fair": 0.7799,
+     "3 - Good": 0.7962,
+     "4 - Excellent": 0.7363
+    },
+    "rarity": {
+     "0 - extremely rare": 0.5569,
+     "1 - rare": 0.6195,
+     "2 - uncommon": 0.7394,
+     "3 - common": 0.7762,
+     "4 - very common": 0.76,
+     "Unknown": 0.7903
+    },
+    "period": {
+     "Classical (12-14th c)": 0.8816,
+     "Contemporary (19-present)": 0.8092,
+     "Contemporary (20-21st C)": 0.3942,
+     "Early Classical (11-12th c.)": 0.7609,
+     "Early Modern to Modern (17-present)": 0.8819,
+     "Early Modern to now (15-present)": 0.7938,
+     "Early scripts (7-8th c)": 0.4135,
+     "Late Classical (14-15th c.)": 0.9092,
+     "Late Early (9-11th c)": 0.7687,
+     "Medieval (15)-present": 0.7557,
+     "Mid Early (8-9th c)": 0.4384,
+     "Modern (18-present)": 0.6839,
+     "Unknown": 0.7891
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-04-17T23-17-34",
+   "model": "Tibetan cursive (Drutsa)",
+   "team": "transkribus",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-04-17T23-17-34`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-04-17T23:17:34Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-04-17T23-17-34.csv",
+   "mean_cer": 0.7877,
+   "median_cer": 1.0,
+   "catastrophic_pct": 75.64,
+   "coverage": 180,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 0.709,
+     "manuscripts": 0.7085,
+     "metal_types": 1.0,
+     "modern": 0.9645,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 1.0,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 0.8813,
+     "Ume": 0.4921,
+     "Ume+Uchen": 0.7545,
+     "Ume+Ume": 0.5489
+    },
+    "script_4": {
+     "Danyig": 0.3796,
+     "Druma": 0.2302,
+     "Gyuyig": 0.6198,
+     "Non-applicable": 0.8462,
+     "Pedri": 0.4443,
+     "Tsugdri": 0.5504,
+     "Uchen": 1.0,
+     "Unknown": 0.89
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9426,
+     "2 - Fair": 0.9024,
+     "3 - Good": 0.8258,
+     "4 - Excellent": 0.748
+    },
+    "rarity": {
+     "0 - extremely rare": 0.8257,
+     "1 - rare": 0.8279,
+     "2 - uncommon": 0.7199,
+     "3 - common": 0.7593,
+     "4 - very common": 0.9161,
+     "Unknown": 0.9689
+    },
+    "period": {
+     "Classical (12-14th c)": 0.199,
+     "Contemporary (19-present)": 0.4804,
+     "Contemporary (20-21st C)": 1.0,
+     "Early Classical (11-12th c.)": 0.8454,
+     "Early Modern to Modern (17-present)": 0.5755,
+     "Early Modern to now (15-present)": 0.7312,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.3707,
+     "Late Early (9-11th c)": 0.8602,
+     "Medieval (15)-present": 0.9422,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.8058,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-12T05-14-18",
+   "model": "Qwen/Qwen3.5-2B",
+   "team": "Qwen35",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-12T05-14-18`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-12T05:14:18Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-12T05-14-18.csv",
+   "mean_cer": 0.8085,
+   "median_cer": 1.0,
+   "catastrophic_pct": 76.91,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.8935,
+     "digital_fonts": 0.7055,
+     "manuscripts": 0.9253,
+     "metal_types": 0.3622,
+     "modern": 0.2564,
+     "typewriters": 0.5175
+    },
+    "script": {
+     "Transitional": 0.8178,
+     "Uchen": 0.6476,
+     "Uchen+Uchen": 0.8633,
+     "Uchen+Ume": 1.0,
+     "Ume": 0.9947,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 0.9778,
+     "Druma": 0.9787,
+     "Gyuyig": 0.9971,
+     "Non-applicable": 0.7767,
+     "Pedri": 1.0,
+     "Tsugdri": 1.0,
+     "Uchen": 0.6567,
+     "Unknown": 0.918
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 1.0,
+     "2 - Fair": 0.9101,
+     "3 - Good": 0.9048,
+     "4 - Excellent": 0.7447
+    },
+    "rarity": {
+     "0 - extremely rare": 0.3911,
+     "1 - rare": 0.4902,
+     "2 - uncommon": 0.7739,
+     "3 - common": 0.8702,
+     "4 - very common": 0.7175,
+     "Unknown": 1.0
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9587,
+     "Contemporary (19-present)": 0.809,
+     "Contemporary (20-21st C)": 0.3869,
+     "Early Classical (11-12th c.)": 0.7507,
+     "Early Modern to Modern (17-present)": 0.9951,
+     "Early Modern to now (15-present)": 0.8216,
+     "Early scripts (7-8th c)": 0.1474,
+     "Late Classical (14-15th c.)": 1.0,
+     "Late Early (9-11th c)": 0.8082,
+     "Medieval (15)-present": 0.8035,
+     "Mid Early (8-9th c)": 0.2085,
+     "Modern (18-present)": 0.7124,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T06-35-01",
+   "model": "gpt-5.5",
+   "team": "OpenAI",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T06-35-01`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T06:35:01Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T06-35-01.csv",
+   "mean_cer": 0.8224,
+   "median_cer": 0.7567,
+   "catastrophic_pct": 99.79,
+   "coverage": 471,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.872,
+     "digital_fonts": 0.7898,
+     "manuscripts": 0.8339,
+     "metal_types": 0.7384,
+     "modern": 0.7715,
+     "typewriters": 0.7641
+    },
+    "script": {
+     "Transitional": 0.7203,
+     "Uchen": 0.7911,
+     "Uchen+Uchen": 0.9135,
+     "Uchen+Ume": 0.8349,
+     "Ume": 0.8633,
+     "Ume+Uchen": 0.9824,
+     "Ume+Ume": 0.903
+    },
+    "script_4": {
+     "Danyig": 0.8365,
+     "Druma": 0.8473,
+     "Gyuyig": 0.8901,
+     "Non-applicable": 0.7594,
+     "Pedri": 0.8435,
+     "Tsugdri": 0.8506,
+     "Uchen": 0.791,
+     "Unknown": 0.907
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9616,
+     "2 - Fair": 0.8567,
+     "3 - Good": 0.8535,
+     "4 - Excellent": 0.798
+    },
+    "rarity": {
+     "0 - extremely rare": 0.7098,
+     "1 - rare": 0.78,
+     "2 - uncommon": 0.8182,
+     "3 - common": 0.8289,
+     "4 - very common": 0.8318,
+     "Unknown": 0.7532
+    },
+    "period": {
+     "Classical (12-14th c)": 0.8334,
+     "Contemporary (19-present)": 0.7984,
+     "Contemporary (20-21st C)": 0.754,
+     "Early Classical (11-12th c.)": 0.7484,
+     "Early Modern to Modern (17-present)": 0.8668,
+     "Early Modern to now (15-present)": 0.8484,
+     "Early scripts (7-8th c)": 0.6677,
+     "Late Classical (14-15th c.)": 0.8524,
+     "Late Early (9-11th c)": 0.8326,
+     "Medieval (15)-present": 0.819,
+     "Mid Early (8-9th c)": 0.7225,
+     "Modern (18-present)": 0.8172,
+     "Unknown": 0.7327
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-10T07-12-05",
+   "model": "NamselOCR",
+   "team": "NamselOCR",
+   "training": "fine-tuned",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-10T07-12-05`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-10T07:12:05Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-10T07-12-05.csv",
+   "mean_cer": 0.8421,
+   "median_cer": 0.918,
+   "catastrophic_pct": 93.43,
+   "coverage": 471,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.8937,
+     "digital_fonts": 0.8788,
+     "manuscripts": 0.8599,
+     "metal_types": 0.4902,
+     "modern": 0.4828,
+     "typewriters": 0.5971
+    },
+    "script": {
+     "Transitional": 0.7227,
+     "Uchen": 0.7943,
+     "Uchen+Uchen": 0.8724,
+     "Uchen+Ume": 0.8314,
+     "Ume": 0.9093,
+     "Ume+Uchen": 0.9313,
+     "Ume+Ume": 0.9731
+    },
+    "script_4": {
+     "Danyig": 0.9215,
+     "Druma": 0.9242,
+     "Gyuyig": 0.9163,
+     "Non-applicable": 0.7781,
+     "Pedri": 0.8805,
+     "Tsugdri": 0.9251,
+     "Uchen": 0.7941,
+     "Unknown": 0.8872
+    },
+    "legibility": {
+     "0 - Illegible": 0.7706,
+     "1 - Poor": 0.8903,
+     "2 - Fair": 0.8735,
+     "3 - Good": 0.8726,
+     "4 - Excellent": 0.8229
+    },
+    "rarity": {
+     "0 - extremely rare": 0.8159,
+     "1 - rare": 0.8805,
+     "2 - uncommon": 0.8153,
+     "3 - common": 0.8805,
+     "4 - very common": 0.7795,
+     "Unknown": 0.6769
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9314,
+     "Contemporary (19-present)": 0.9036,
+     "Contemporary (20-21st C)": 0.852,
+     "Early Classical (11-12th c.)": 0.8054,
+     "Early Modern to Modern (17-present)": 0.9037,
+     "Early Modern to now (15-present)": 0.8933,
+     "Early scripts (7-8th c)": 0.9759,
+     "Late Classical (14-15th c.)": 0.8681,
+     "Late Early (9-11th c)": 0.8415,
+     "Medieval (15)-present": 0.841,
+     "Mid Early (8-9th c)": 0.6632,
+     "Modern (18-present)": 0.788,
+     "Unknown": 0.6648
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-01T12-09-29",
+   "model": "deepseek-ai/DeepSeek-OCR",
+   "team": "DeepSeek-OCR",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-01T12-09-29`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-01T12:09:29Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-01T12-09-29.csv",
+   "mean_cer": 0.8627,
+   "median_cer": 1.0,
+   "catastrophic_pct": 85.38,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.9927,
+     "digital_fonts": 0.6872,
+     "manuscripts": 0.9882,
+     "metal_types": 0.5341,
+     "modern": 0.4402,
+     "typewriters": 0.4708
+    },
+    "script": {
+     "Transitional": 0.8749,
+     "Uchen": 0.7387,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 1.0,
+     "Ume": 1.0,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 1.0,
+     "Druma": 1.0,
+     "Gyuyig": 1.0,
+     "Non-applicable": 0.885,
+     "Pedri": 1.0,
+     "Tsugdri": 1.0,
+     "Uchen": 0.7392,
+     "Unknown": 1.0
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 1.0,
+     "2 - Fair": 0.9571,
+     "3 - Good": 0.9607,
+     "4 - Excellent": 0.8016
+    },
+    "rarity": {
+     "0 - extremely rare": 0.9861,
+     "1 - rare": 0.6575,
+     "2 - uncommon": 0.8209,
+     "3 - common": 0.8892,
+     "4 - very common": 0.8459,
+     "Unknown": 1.0
+    },
+    "period": {
+     "Classical (12-14th c)": 1.0,
+     "Contemporary (19-present)": 0.785,
+     "Contemporary (20-21st C)": 0.3439,
+     "Early Classical (11-12th c.)": 0.7082,
+     "Early Modern to Modern (17-present)": 1.0,
+     "Early Modern to now (15-present)": 0.9299,
+     "Early scripts (7-8th c)": 0.9444,
+     "Late Classical (14-15th c.)": 1.0,
+     "Late Early (9-11th c)": 0.9126,
+     "Medieval (15)-present": 0.8814,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.7496,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-tibetan-ocr-lighton",
+   "model": "lightonai/LightOnOCR-2-1B",
+   "team": "LightOnOCR2",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `tibetan-ocr-lighton`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/tibetan-ocr-lighton.csv",
+   "mean_cer": 0.8677,
+   "median_cer": 1.0,
+   "catastrophic_pct": 84.75,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.9682,
+     "digital_fonts": 0.7367,
+     "manuscripts": 0.9571,
+     "metal_types": 0.6335,
+     "modern": 0.5912,
+     "typewriters": 0.5273
+    },
+    "script": {
+     "Transitional": 0.8685,
+     "Uchen": 0.7529,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 1.0,
+     "Ume": 0.9955,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 1.0,
+     "Druma": 0.9938,
+     "Gyuyig": 0.9928,
+     "Non-applicable": 0.7939,
+     "Pedri": 0.9972,
+     "Tsugdri": 1.0,
+     "Uchen": 0.766,
+     "Unknown": 1.0
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9904,
+     "2 - Fair": 0.9403,
+     "3 - Good": 0.9435,
+     "4 - Excellent": 0.8198
+    },
+    "rarity": {
+     "0 - extremely rare": 0.7947,
+     "1 - rare": 0.6956,
+     "2 - uncommon": 0.8287,
+     "3 - common": 0.9079,
+     "4 - very common": 0.8319,
+     "Unknown": 0.8644
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9897,
+     "Contemporary (19-present)": 0.8407,
+     "Contemporary (20-21st C)": 0.5054,
+     "Early Classical (11-12th c.)": 0.8564,
+     "Early Modern to Modern (17-present)": 0.9936,
+     "Early Modern to now (15-present)": 0.8957,
+     "Early scripts (7-8th c)": 0.3729,
+     "Late Classical (14-15th c.)": 0.9974,
+     "Late Early (9-11th c)": 0.783,
+     "Medieval (15)-present": 0.876,
+     "Mid Early (8-9th c)": 0.903,
+     "Modern (18-present)": 0.8007,
+     "Unknown": 0.8531
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T06-37-39",
+   "model": "gpt-4.1",
+   "team": "OpenAI",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T06-37-39`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T06:37:39Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T06-37-39.csv",
+   "mean_cer": 0.8714,
+   "median_cer": 0.8719,
+   "catastrophic_pct": 100.0,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.8515,
+     "digital_fonts": 0.9039,
+     "manuscripts": 0.8537,
+     "metal_types": 0.8933,
+     "modern": 0.8821,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 0.8867,
+     "Uchen": 0.8682,
+     "Uchen+Uchen": 0.9194,
+     "Uchen+Ume": 0.9079,
+     "Ume": 0.8725,
+     "Ume+Uchen": 0.8816,
+     "Ume+Ume": 0.7084
+    },
+    "script_4": {
+     "Danyig": 0.8823,
+     "Druma": 0.8774,
+     "Gyuyig": 0.8647,
+     "Non-applicable": 0.8841,
+     "Pedri": 0.8908,
+     "Tsugdri": 0.8382,
+     "Uchen": 0.8685,
+     "Unknown": 0.8822
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.8933,
+     "2 - Fair": 0.8913,
+     "3 - Good": 0.8554,
+     "4 - Excellent": 0.874
+    },
+    "rarity": {
+     "0 - extremely rare": 0.9492,
+     "1 - rare": 0.9074,
+     "2 - uncommon": 0.8735,
+     "3 - common": 0.8602,
+     "4 - very common": 0.9021,
+     "Unknown": 0.8026
+    },
+    "period": {
+     "Classical (12-14th c)": 0.8459,
+     "Contemporary (19-present)": 0.8864,
+     "Contemporary (20-21st C)": 0.9252,
+     "Early Classical (11-12th c.)": 0.9144,
+     "Early Modern to Modern (17-present)": 0.8717,
+     "Early Modern to now (15-present)": 0.89,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.8994,
+     "Late Early (9-11th c)": 0.7832,
+     "Medieval (15)-present": 0.8616,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.8772,
+     "Unknown": 0.7861
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-01T18-15-02",
+   "model": "deepseek-ai/DeepSeek-OCR-2",
+   "team": "DeepSeek-OCR-2",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-01T18-15-02`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-01T18:15:02Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-01T18-15-02.csv",
+   "mean_cer": 0.9805,
+   "median_cer": 1.0,
+   "catastrophic_pct": 97.88,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 0.9309,
+     "manuscripts": 1.0,
+     "metal_types": 1.0,
+     "modern": 1.0,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 0.9614,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 1.0,
+     "Ume": 1.0,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 1.0,
+     "Druma": 1.0,
+     "Gyuyig": 1.0,
+     "Non-applicable": 1.0,
+     "Pedri": 1.0,
+     "Tsugdri": 1.0,
+     "Uchen": 0.9608,
+     "Unknown": 1.0
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 1.0,
+     "2 - Fair": 1.0,
+     "3 - Good": 1.0,
+     "4 - Excellent": 0.9687
+    },
+    "rarity": {
+     "0 - extremely rare": 1.0,
+     "1 - rare": 1.0,
+     "2 - uncommon": 0.9827,
+     "3 - common": 0.9856,
+     "4 - very common": 0.9555,
+     "Unknown": 1.0
+    },
+    "period": {
+     "Classical (12-14th c)": 1.0,
+     "Contemporary (19-present)": 1.0,
+     "Contemporary (20-21st C)": 0.9402,
+     "Early Classical (11-12th c.)": 1.0,
+     "Early Modern to Modern (17-present)": 1.0,
+     "Early Modern to now (15-present)": 0.9817,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 1.0,
+     "Late Early (9-11th c)": 1.0,
+     "Medieval (15)-present": 0.9782,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.9641,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-11T11-57-26",
+   "model": "deepseek-ai/deepseek-vl2-tiny",
+   "team": "DeepSeek_VL2",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-11T11-57-26`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-11T11:57:26Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-11T11-57-26.csv",
+   "mean_cer": 0.9885,
+   "median_cer": 1.0,
+   "catastrophic_pct": 100.0,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.9982,
+     "digital_fonts": 0.9881,
+     "manuscripts": 0.9912,
+     "metal_types": 0.9775,
+     "modern": 0.9505,
+     "typewriters": 0.8775
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 0.9858,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 1.0,
+     "Ume": 0.9895,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 0.9982
+    },
+    "script_4": {
+     "Danyig": 0.9798,
+     "Druma": 0.9611,
+     "Gyuyig": 0.9918,
+     "Non-applicable": 0.996,
+     "Pedri": 0.9972,
+     "Tsugdri": 1.0,
+     "Uchen": 0.986,
+     "Unknown": 0.9997
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9996,
+     "2 - Fair": 0.9943,
+     "3 - Good": 0.9883,
+     "4 - Excellent": 0.9873
+    },
+    "rarity": {
+     "0 - extremely rare": 1.0,
+     "1 - rare": 0.9658,
+     "2 - uncommon": 0.9818,
+     "3 - common": 0.9917,
+     "4 - very common": 0.9893,
+     "Unknown": 1.0
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9668,
+     "Contemporary (19-present)": 0.9964,
+     "Contemporary (20-21st C)": 0.9828,
+     "Early Classical (11-12th c.)": 0.9577,
+     "Early Modern to Modern (17-present)": 0.9875,
+     "Early Modern to now (15-present)": 0.9942,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.9986,
+     "Late Early (9-11th c)": 0.9725,
+     "Medieval (15)-present": 0.993,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.9818,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T09-35-59",
+   "model": "mistral-ocr-3-0",
+   "team": "MistralOCR",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T09-35-59`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T09:35:59Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T09-35-59.csv",
+   "mean_cer": 0.9979,
+   "median_cer": 1.0,
+   "catastrophic_pct": 99.79,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 0.9926,
+     "manuscripts": 0.9999,
+     "metal_types": 0.9998,
+     "modern": 0.9997,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 0.9958,
+     "Uchen+Uchen": 0.9999,
+     "Uchen+Ume": 1.0,
+     "Ume": 1.0,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 0.9999,
+     "Druma": 1.0,
+     "Gyuyig": 0.9999,
+     "Non-applicable": 0.9999,
+     "Pedri": 1.0,
+     "Tsugdri": 1.0,
+     "Uchen": 0.9958,
+     "Unknown": 1.0
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 1.0,
+     "2 - Fair": 0.9999,
+     "3 - Good": 0.9999,
+     "4 - Excellent": 0.9966
+    },
+    "rarity": {
+     "0 - extremely rare": 0.9985,
+     "1 - rare": 0.9997,
+     "2 - uncommon": 0.9999,
+     "3 - common": 0.9989,
+     "4 - very common": 0.9918,
+     "Unknown": 1.0
+    },
+    "period": {
+     "Classical (12-14th c)": 1.0,
+     "Contemporary (19-present)": 1.0,
+     "Contemporary (20-21st C)": 0.9997,
+     "Early Classical (11-12th c.)": 1.0,
+     "Early Modern to Modern (17-present)": 0.9999,
+     "Early Modern to now (15-present)": 1.0,
+     "Early scripts (7-8th c)": 0.994,
+     "Late Classical (14-15th c.)": 0.9999,
+     "Late Early (9-11th c)": 1.0,
+     "Medieval (15)-present": 0.9959,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.9971,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-11T13-08-21",
+   "model": "OpenGVLab/InternVL3_5-2B",
+   "team": "InternVL3.5",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-11T13-08-21`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-11T13:08:21Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-11T13-08-21.csv",
+   "mean_cer": 0.9984,
+   "median_cer": 1.0,
+   "catastrophic_pct": 100.0,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.9983,
+     "digital_fonts": 1.0,
+     "manuscripts": 0.9972,
+     "metal_types": 0.9986,
+     "modern": 1.0,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 0.999,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 0.9997,
+     "Ume": 0.9973,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 0.9805,
+     "Druma": 1.0,
+     "Gyuyig": 0.9966,
+     "Non-applicable": 0.9999,
+     "Pedri": 0.9999,
+     "Tsugdri": 0.9999,
+     "Uchen": 0.9989,
+     "Unknown": 1.0
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9998,
+     "2 - Fair": 0.9963,
+     "3 - Good": 0.9999,
+     "4 - Excellent": 0.998
+    },
+    "rarity": {
+     "0 - extremely rare": 1.0,
+     "1 - rare": 0.9854,
+     "2 - uncommon": 0.9995,
+     "3 - common": 0.9981,
+     "4 - very common": 1.0,
+     "Unknown": 1.0
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9843,
+     "Contemporary (19-present)": 1.0,
+     "Contemporary (20-21st C)": 0.9999,
+     "Early Classical (11-12th c.)": 1.0,
+     "Early Modern to Modern (17-present)": 1.0,
+     "Early Modern to now (15-present)": 0.9998,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.9999,
+     "Late Early (9-11th c)": 0.998,
+     "Medieval (15)-present": 0.9988,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.9971,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T12-23-57",
+   "model": "StartDocumentTextDetection",
+   "team": "AwsTextract",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T12-23-57`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T12:23:57Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T12-23-57.csv",
+   "mean_cer": 0.9999,
+   "median_cer": 1.0,
+   "catastrophic_pct": 100.0,
+   "coverage": 471,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 1.0,
+     "manuscripts": 0.9999,
+     "metal_types": 1.0,
+     "modern": 0.9998,
+     "typewriters": 0.9999
+    },
+    "script": {
+     "Transitional": 1.0,
+     "Uchen": 0.9999,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 1.0,
+     "Ume": 0.9999,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 0.9991
+    },
+    "script_4": {
+     "Danyig": 1.0,
+     "Druma": 0.9999,
+     "Gyuyig": 0.9998,
+     "Non-applicable": 1.0,
+     "Pedri": 1.0,
+     "Tsugdri": 0.9999,
+     "Uchen": 0.9999,
+     "Unknown": 0.9999
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9997,
+     "2 - Fair": 0.9998,
+     "3 - Good": 0.9999,
+     "4 - Excellent": 1.0
+    },
+    "rarity": {
+     "0 - extremely rare": 1.0,
+     "1 - rare": 0.9999,
+     "2 - uncommon": 1.0,
+     "3 - common": 0.9999,
+     "4 - very common": 0.9999,
+     "Unknown": 1.0
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9999,
+     "Contemporary (19-present)": 1.0,
+     "Contemporary (20-21st C)": 1.0,
+     "Early Classical (11-12th c.)": 1.0,
+     "Early Modern to Modern (17-present)": 0.9998,
+     "Early Modern to now (15-present)": 1.0,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 1.0,
+     "Late Early (9-11th c)": 1.0,
+     "Medieval (15)-present": 0.9999,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.9999,
+     "Unknown": 1.0
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T14-40-14",
+   "model": "prebuilt-read",
+   "team": "azure_document_intelligence",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T14-40-14`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T14:40:14Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T14-40-14.csv",
+   "mean_cer": 0.9999,
+   "median_cer": 1.0,
+   "catastrophic_pct": 100.0,
+   "coverage": 463,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 1.0,
+     "manuscripts": 0.9998,
+     "metal_types": 0.9998,
+     "modern": 0.9998,
+     "typewriters": 0.9999
+    },
+    "script": {
+     "Transitional": 0.9999,
+     "Uchen": 0.9999,
+     "Uchen+Uchen": 0.9999,
+     "Uchen+Ume": 0.9995,
+     "Ume": 0.9998,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 1.0
+    },
+    "script_4": {
+     "Danyig": 0.9997,
+     "Druma": 0.9999,
+     "Gyuyig": 0.9998,
+     "Non-applicable": 0.9999,
+     "Pedri": 0.9999,
+     "Tsugdri": 0.9999,
+     "Uchen": 0.9999,
+     "Unknown": 0.9999
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 1.0,
+     "2 - Fair": 0.9998,
+     "3 - Good": 0.9998,
+     "4 - Excellent": 0.9999
+    },
+    "rarity": {
+     "0 - extremely rare": 1.0,
+     "1 - rare": 1.0,
+     "2 - uncommon": 0.9999,
+     "3 - common": 0.9999,
+     "4 - very common": 0.9999,
+     "Unknown": 0.9999
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9998,
+     "Contemporary (19-present)": 1.0,
+     "Contemporary (20-21st C)": 1.0,
+     "Early Classical (11-12th c.)": 1.0,
+     "Early Modern to Modern (17-present)": 0.9998,
+     "Early Modern to now (15-present)": 0.9999,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.9998,
+     "Late Early (9-11th c)": 0.9999,
+     "Medieval (15)-present": 1.0,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.9998,
+     "Unknown": 0.9999
+    }
+   },
+   "stale": false
+  },
+  {
+   "id": "bdrc-2026-05-09T15-21-17",
+   "model": "image-analysis-read",
+   "team": "azure_vision_read",
+   "training": "off-the-shelf",
+   "open_weights": null,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "BDRC reference run `2026-05-09T15-21-17`.",
+   "source": "bdrc-reference",
+   "submitted_by": "BDRC",
+   "submitted_at": "2026-05-09T15:21:17Z",
+   "issue_url": "",
+   "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-05-09T15-21-17.csv",
+   "mean_cer": 0.9999,
+   "median_cer": 1.0,
+   "catastrophic_pct": 100.0,
+   "coverage": 434,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 1.0,
+     "digital_fonts": 1.0,
+     "manuscripts": 0.9999,
+     "metal_types": 0.9998,
+     "modern": 0.9998,
+     "typewriters": 1.0
+    },
+    "script": {
+     "Transitional": 0.9998,
+     "Uchen": 1.0,
+     "Uchen+Uchen": 1.0,
+     "Uchen+Ume": 1.0,
+     "Ume": 0.9999,
+     "Ume+Uchen": 1.0,
+     "Ume+Ume": 0.9991
+    },
+    "script_4": {
+     "Danyig": 0.9997,
+     "Druma": 0.9999,
+     "Gyuyig": 0.9999,
+     "Non-applicable": 0.9999,
+     "Pedri": 0.9999,
+     "Tsugdri": 1.0,
+     "Uchen": 1.0,
+     "Unknown": 0.9999
+    },
+    "legibility": {
+     "0 - Illegible": 1.0,
+     "1 - Poor": 0.9998,
+     "2 - Fair": 0.9999,
+     "3 - Good": 0.9999,
+     "4 - Excellent": 0.9999
+    },
+    "rarity": {
+     "0 - extremely rare": 1.0,
+     "1 - rare": 1.0,
+     "2 - uncommon": 0.9999,
+     "3 - common": 0.9999,
+     "4 - very common": 1.0,
+     "Unknown": 0.9997
+    },
+    "period": {
+     "Classical (12-14th c)": 0.9998,
+     "Contemporary (19-present)": 1.0,
+     "Contemporary (20-21st C)": 1.0,
+     "Early Classical (11-12th c.)": 0.9999,
+     "Early Modern to Modern (17-present)": 0.9999,
+     "Early Modern to now (15-present)": 1.0,
+     "Early scripts (7-8th c)": 1.0,
+     "Late Classical (14-15th c.)": 0.9998,
+     "Late Early (9-11th c)": 0.9999,
+     "Medieval (15)-present": 1.0,
+     "Mid Early (8-9th c)": 1.0,
+     "Modern (18-present)": 0.9999,
+     "Unknown": 0.9996
+    }
+   },
+   "stale": false
+  }
+ ]
+}

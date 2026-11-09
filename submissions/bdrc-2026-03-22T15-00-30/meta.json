@@ -1,0 +1,14 @@
+{
+  "model": "Qwen3.5-397B-A17B",
+  "team": "Qwen35",
+  "training": "off-the-shelf",
+  "open_weights": null,
+  "model_url": "",
+  "paper_url": "",
+  "notes": "BDRC reference run `2026-03-22T15-00-30`.",
+  "source": "bdrc-reference",
+  "submitted_by": "BDRC",
+  "submitted_at": "2026-03-22T15:00:30Z",
+  "issue_url": "",
+  "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-22T15-00-30.csv"
+}

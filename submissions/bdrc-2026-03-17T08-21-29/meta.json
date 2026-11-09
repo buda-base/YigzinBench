@@ -1,0 +1,14 @@
+{
+  "model": "PaddleOCR-VL-1.5-0.9B",
+  "team": "PaddleOCR-VL",
+  "training": "off-the-shelf",
+  "open_weights": null,
+  "model_url": "",
+  "paper_url": "",
+  "notes": "BDRC reference run `2026-03-17T08-21-29`.",
+  "source": "bdrc-reference",
+  "submitted_by": "BDRC",
+  "submitted_at": "2026-03-17T08:21:29Z",
+  "issue_url": "",
+  "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/2026-03-17T08-21-29.csv"
+}

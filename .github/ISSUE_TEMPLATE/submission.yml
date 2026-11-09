@@ -1,0 +1,79 @@
+name: Leaderboard submission
+description: Submit OCR predictions on the BDRC Tibetan OCR benchmark. A bot scores them and replies.
+title: "[Submission] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting! Within a few minutes a bot will reply with your CER.
+        A maintainer then reviews the entry and adds it to the leaderboard.
+
+        **Format:** a UTF-8 CSV with the header `id,transcription` and one row per page of the
+        [`test` split](https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark) (472 pages).
+        Keep the `id` values exactly as in the dataset (e.g. `0002`). Missing pages count as CER 100%.
+        You can check your score locally first with `python -m scorer.score predictions.csv`.
+
+        **Editing the issue** re-scores it, so you can fix a file without opening a new issue.
+  - type: input
+    id: model
+    attributes:
+      label: Model name
+      description: The name shown on the leaderboard.
+      placeholder: e.g. my-tibetan-ocr-v2
+    validations:
+      required: true
+  - type: input
+    id: team
+    attributes:
+      label: Team or organization
+      placeholder: e.g. Your lab, company, or your own name
+    validations:
+      required: true
+  - type: dropdown
+    id: training
+    attributes:
+      label: Training
+      options:
+        - Off-the-shelf (no Tibetan-specific training)
+        - Fine-tuned or trained for Tibetan
+    validations:
+      required: true
+  - type: dropdown
+    id: open_weights
+    attributes:
+      label: Open weights
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: model_url
+    attributes:
+      label: Model or code link
+      placeholder: https://huggingface.co/... or https://github.com/...
+  - type: input
+    id: paper_url
+    attributes:
+      label: Paper or report link
+      placeholder: https://arxiv.org/abs/...
+  - type: textarea
+    id: predictions
+    attributes:
+      label: Predictions CSV
+      description: Drag and drop your CSV file into this box. You can instead paste a Hugging Face `/resolve/` URL or a raw gist URL.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Optional. Inference settings, prompt, post-processing, anything readers should know.
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: These predictions were produced by the model named above, without using the benchmark's ground-truth transcriptions.
+          required: true

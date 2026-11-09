@@ -1,0 +1,14 @@
+{
+  "model": "lightonai/LightOnOCR-2-1B",
+  "team": "LightOnOCR2",
+  "training": "off-the-shelf",
+  "open_weights": null,
+  "model_url": "",
+  "paper_url": "",
+  "notes": "BDRC reference run `tibetan-ocr-lighton`.",
+  "source": "bdrc-reference",
+  "submitted_by": "BDRC",
+  "submitted_at": "",
+  "issue_url": "",
+  "predictions_url": "https://huggingface.co/datasets/BDRC/tibetan-ocr-benchmark/resolve/bb50fb52976df2d8b392f8d69c3925491ca58976/runs/predictions/tibetan-ocr-lighton.csv"
+}
