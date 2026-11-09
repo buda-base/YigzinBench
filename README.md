@@ -5,7 +5,26 @@ Anyone can download the 472 test pages, run their own OCR model, and submit the 
 GitHub Actions scores the submission, and the leaderboard is a static GitHub Pages site.
 There is no server to run.
 
-Leaderboard: <https://buda-base.github.io/YigzinBench/>
+**[See the leaderboard](https://buda-base.github.io/YigzinBench/)** or **[submit your model](https://github.com/buda-base/YigzinBench/issues/new?template=submission.yml)**.
+
+## Leaderboard
+
+<!-- leaderboard:start -->
+| # | Model | Team | Error rate |
+|---:|---|---|---:|
+| 1 | Yigdzin-v1 | BDRC OCR | 3.2% |
+| 2 | bdrc-mitra-ocr-qwen35-0.8b | MITRA-BDRC | 7.3% |
+| 3 | builtin/stable | google_vision | 22.2% |
+| 4 | builtin/weekly | google_vision | 24.7% |
+| 5 | PechaBridgeOCR_v1 | DONUT | 28.0% |
+| 6 | PechaBridgeOCR_v2 | DONUT | 33.7% |
+| 7 | PaddleOCR-VL-1.6-0.9B | PaddleOCR-VL | 37.4% |
+| 8 | gemini-3-pro-preview | Gemini | 39.4% |
+| 9 | gemini-3.1-pro-preview | Gemini | 40.3% |
+| 10 | PaddleOCR-VL-1.5-0.9B | PaddleOCR-VL | 41.2% |
+
+Top 10 of 46 models. [See the full leaderboard](https://buda-base.github.io/YigzinBench/), with breakdowns by script, technology and legibility.
+<!-- leaderboard:end -->
 
 ## Submitting a model
 
@@ -20,7 +39,7 @@ Leaderboard: <https://buda-base.github.io/YigzinBench/>
    pip install -r scorer/requirements.txt
    python -m scorer.score predictions.csv
    ```
-4. **[Open a submission issue](../../issues/new?template=submission.yml)**: fill in the model name, team and links, and drag the CSV into the form.
+4. **[Open a submission issue](https://github.com/buda-base/YigzinBench/issues/new?template=submission.yml)**: fill in the model name, team and links, and drag the CSV into the form.
    Within a few minutes a bot replies with your CER and a per-category breakdown.
    Editing the issue re-scores it. A maintainer then approves it and it appears on the leaderboard.
 

@@ -18,6 +18,9 @@ from scorer.score import CATEGORIES, SCORER_VERSION, UNKNOWN, load_reference, sc
 ROOT = Path(__file__).resolve().parents[1]
 SUBMISSIONS = ROOT / "submissions"
 OUTPUT = ROOT / "leaderboard" / "leaderboard.json"
+SITE_URL = "https://buda-base.github.io/YigzinBench/"
+README_START = "<!-- leaderboard:start -->"
+README_END = "<!-- leaderboard:end -->"
 
 META_KEYS = [
     "model", "team", "training", "open_weights", "model_url", "paper_url", "notes",
@@ -87,7 +90,32 @@ def build() -> dict:
     }
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(board, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    update_readme(entries)
     return board
+
+
+def _cell(text: str) -> str:
+    return text.replace("|", "\\|").replace("@", "&#64;").replace("\n", " ")
+
+
+def update_readme(entries: list[dict], top: int = 10) -> None:
+    """Rewrite the top-N table between the leaderboard markers in README.md."""
+    readme = ROOT / "README.md"
+    if not readme.exists():
+        return
+    text = readme.read_text(encoding="utf-8")
+    start, end = README_START, README_END
+    if start not in text or end not in text:
+        return
+    rows = ["| # | Model | Team | Error rate |", "|---:|---|---|---:|"]
+    for i, e in enumerate(entries[:top], 1):
+        rows.append(f"| {i} | {_cell(e['model'])} | {_cell(e['team'])} | {e['mean_cer'] * 100:.1f}% |")
+    rows.append("")
+    rows.append(f"Top {min(top, len(entries))} of {len(entries)} models. "
+                f"[See the full leaderboard]({SITE_URL}), with breakdowns by script, technology and legibility.")
+    before, rest = text.split(start, 1)
+    after = rest.split(end, 1)[1]
+    readme.write_text(f"{before}{start}\n" + "\n".join(rows) + f"\n{end}{after}", encoding="utf-8")
 
 
 def main(argv: list[str] | None = None) -> int:

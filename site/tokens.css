@@ -1,21 +1,38 @@
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
-  --text-xs: 0.75rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.2rem; --text-xl: 1.44rem; --text-2xl: 1.728rem; --text-3xl: 2.074rem;
-  --text-display-s: 1.44rem; --text-display: 1.728rem; --text-section: 1.2rem; --text-title: 1rem; --text-lead: 1rem;
+  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.375rem; --text-2xl: 1.75rem; --text-3xl: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);
+  --text-display-s: 1.75rem; --text-display: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem); --text-section: 1.75rem; --text-title: 1.125rem; --text-lead: 1.125rem;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
-  --color-error: oklch(72% 0.15 27); --color-success: oklch(76% 0.13 150);
-  --container: 1440px; --gutter: 64px; --gap-columns: 32px; --section-gap-s: 120px; --section-gap: 144px; --section-gap-l: 176px;
-  --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  --color-paper: oklch(12.5% 0.027 290); --color-paper-2: oklch(16% 0.03 290); --color-paper-3: oklch(20% 0.032 290);
-  --color-ink: oklch(96% 0.01 300); --color-ink-2: oklch(85% 0.017 298); --color-muted: oklch(69% 0.026 295);
-  --color-rule: oklch(27% 0.034 290); --color-rule-2: oklch(36% 0.04 292); --rule-blueprint: oklch(96% 0.01 300 / 0.05);
-  --color-accent: oklch(80% 0.15 62); --color-accent-2: oklch(72% 0.15 12); --color-accent-ink: oklch(14% 0.028 290);
-  --color-live: oklch(80% 0.13 155); --color-focus: oklch(80% 0.15 62);
-  --font-display: "Instrument Serif", ui-serif, Georgia, serif; --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --container: 1200px; --gutter: 48px; --gap-columns: 24px;
+  --z-base: 1; --z-raised: 10; --z-sticky-nav: 300;
+
+  /* warm library paper, dark ink, one maroon signal, saffron for the top rank */
+  --color-paper: oklch(97.6% 0.008 85);
+  --color-paper-2: oklch(95% 0.014 82);
+  --color-paper-3: oklch(91.5% 0.02 80);
+  --color-card: oklch(99.4% 0.003 85);
+  --color-ink: oklch(24% 0.02 50);
+  --color-ink-2: oklch(40% 0.02 55);
+  --color-muted: oklch(52% 0.02 60);
+  --color-rule: oklch(89% 0.014 78);
+  --color-rule-2: oklch(81% 0.02 75);
+  --color-accent: oklch(44% 0.14 25);
+  --color-accent-hover: oklch(38% 0.13 25);
+  --color-accent-ink: oklch(98.5% 0.006 85);
+  --color-accent-soft: oklch(93% 0.035 30);
+  --color-gold: oklch(80% 0.14 78);
+  --color-gold-ink: oklch(30% 0.06 60);
+  --color-bar: oklch(62% 0.03 60);
+  --color-error: oklch(50% 0.17 27);
+  --color-focus: oklch(55% 0.16 25);
+  --shadow-leaf: 0 1px 2px oklch(30% 0.03 60 / 0.12), 0 12px 28px -14px oklch(30% 0.04 60 / 0.35);
+
+  --font-display: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
   --font-outlier: "Geist Mono", ui-monospace, monospace;
-  --radius-card: 10px; --radius-pill: 999px; --rule-hair: 1px;
-  --shadow-card: 0 28px 64px -30px oklch(4% 0.02 290 / 0.8);
-  --tracking-display: -0.015em; --display-weight: 400;
+  --font-tibetan: "Noto Serif Tibetan", serif;
+  --display-weight: 600; --tracking-display: -0.025em;
+  --radius-card: 12px; --radius-pill: 999px; --rule-hair: 1px;
 }
