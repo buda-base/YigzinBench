@@ -96,7 +96,23 @@ Issue text reaches Python through environment variables and is never interpolate
 **Approving a submission:** read the bot's score, check the model link and notes, then add the `approved` label.
 Only users with write access can approve; the workflow checks this.
 The entry is re-scored, committed under `submissions/issue-<n>/`, and the issue is closed.
-To remove an entry, delete its folder, run `python -m tools.build_leaderboard`, and push.
+
+**Fixing a submission:** ask the submitter to edit the issue, then remove and re-add the `approved` label.
+The entry is re-scored and its folder overwritten.
+
+**Removing a submission:** each entry is one folder under `submissions/`: community entries are `issue-<number>`, BDRC reference runs are `bdrc-<run_id>`.
+To find a folder by model name:
+```bash
+grep -l '"model": "Yigdzin-v1"' submissions/*/meta.json
+```
+Then delete it, rebuild `leaderboard/leaderboard.json` and the README table, and push to `main`. The site redeploys automatically.
+```bash
+pip install -r scorer/requirements.txt   # once
+git rm -r submissions/issue-12
+python -m tools.build_leaderboard
+git commit -am "Remove submission #12" && git push
+```
+Leave a comment on the original issue so the submitter knows why the entry is gone.
 
 **A word on trust:** the ground truth is public, so a submission could be faked.
 Approval is the safeguard: look for a model or code link and plausible per-category results.
