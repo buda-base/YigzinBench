@@ -23,7 +23,7 @@ There is no server to run.
 | 9 | gemini-3.1-pro-preview | Gemini | 40.3% |
 | 10 | PaddleOCR-VL-1.5-0.9B | PaddleOCR-VL | 41.2% |
 
-Top 10 of 46 models. [See the full leaderboard](https://buda-base.github.io/YigzinBench/), with breakdowns by script, technology and legibility.
+Top 10 of 47 models. [See the full leaderboard](https://buda-base.github.io/YigzinBench/), with breakdowns by script, technology and legibility.
 <!-- leaderboard:end -->
 
 ## Submitting a model

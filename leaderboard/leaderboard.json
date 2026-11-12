@@ -1416,6 +1416,86 @@
    "stale": false
   },
   {
+   "id": "issue-3",
+   "model": "Gemini 3.1 pro preview(GEPA)",
+   "team": "WeBuddhist",
+   "training": "off-the-shelf",
+   "open_weights": false,
+   "model_url": "",
+   "paper_url": "",
+   "notes": "",
+   "source": "community",
+   "submitted_by": "kaldan007",
+   "submitted_at": "2026-11-12T12:11:54Z",
+   "issue_url": "https://github.com/buda-base/YigzinBench/issues/3",
+   "predictions_url": "",
+   "mean_cer": 0.4937,
+   "median_cer": 0.5694,
+   "catastrophic_pct": 53.6,
+   "coverage": 472,
+   "n": 472,
+   "breakdown": {
+    "technology": {
+     "blockprints": 0.4542,
+     "digital_fonts": 0.4626,
+     "manuscripts": 0.5941,
+     "metal_types": 0.0972,
+     "modern": 0.1583,
+     "typewriters": 0.337
+    },
+    "script": {
+     "Transitional": 0.3125,
+     "Uchen": 0.2873,
+     "Uchen+Uchen": 0.4203,
+     "Uchen+Ume": 0.6639,
+     "Ume": 0.7628,
+     "Ume+Uchen": 0.824,
+     "Ume+Ume": 0.7332
+    },
+    "script_4": {
+     "Danyig": 0.7209,
+     "Druma": 0.7765,
+     "Gyuyig": 0.7832,
+     "Non-applicable": 0.3618,
+     "Pedri": 0.7577,
+     "Tsugdri": 0.7414,
+     "Uchen": 0.292,
+     "Unknown": 0.5441
+    },
+    "legibility": {
+     "0 - Illegible": 0.7118,
+     "1 - Poor": 0.7497,
+     "2 - Fair": 0.5914,
+     "3 - Good": 0.5455,
+     "4 - Excellent": 0.4466
+    },
+    "rarity": {
+     "0 - extremely rare": 0.2953,
+     "1 - rare": 0.3473,
+     "2 - uncommon": 0.4781,
+     "3 - common": 0.5348,
+     "4 - very common": 0.4461,
+     "Unknown": 0.3735
+    },
+    "period": {
+     "Classical (12-14th c)": 0.8138,
+     "Contemporary (19-present)": 0.517,
+     "Contemporary (20-21st C)": 0.1097,
+     "Early Classical (11-12th c.)": 0.3716,
+     "Early Modern to Modern (17-present)": 0.7524,
+     "Early Modern to now (15-present)": 0.5618,
+     "Early scripts (7-8th c)": 0.0797,
+     "Late Classical (14-15th c.)": 0.7809,
+     "Late Early (9-11th c)": 0.4152,
+     "Medieval (15)-present": 0.397,
+     "Mid Early (8-9th c)": 0.138,
+     "Modern (18-present)": 0.4846,
+     "Unknown": 0.3305
+    }
+   },
+   "stale": false
+  },
+  {
    "id": "bdrc-2026-05-08T14-59-10",
    "model": "claude-opus-4-7",
    "team": "Claude",

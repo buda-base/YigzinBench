@@ -1,0 +1,14 @@
+{
+  "model": "Gemini 3.1 pro preview(GEPA)",
+  "team": "WeBuddhist",
+  "training": "off-the-shelf",
+  "open_weights": false,
+  "model_url": "",
+  "paper_url": "",
+  "notes": "",
+  "source": "community",
+  "submitted_by": "kaldan007",
+  "submitted_at": "2026-11-12T12:11:54Z",
+  "issue_url": "https://github.com/buda-base/YigzinBench/issues/3",
+  "predictions_url": ""
+}
