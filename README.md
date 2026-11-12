@@ -61,6 +61,7 @@ The ground truth and page metadata are vendored in [`scorer/data/`](scorer/data)
 issue form ──► score-submission.yml ──► bot comment with CER          (anyone)
    │
    └─ label "approved" ──► publish-submission.yml                     (maintainers)
+      (keep "submission")
                               ├─ submissions/issue-<n>/{predictions.csv,meta.json,result.json}
                               ├─ leaderboard/leaderboard.json
                               └─ commit ──► deploy-pages.yml ──► GitHub Pages
@@ -94,10 +95,12 @@ Issue text reaches Python through environment variables and is never interpolate
 4. If `main` has branch protection, allow GitHub Actions to push to it, or publishing can't commit.
 
 **Approving a submission:** read the bot's score, check the model link and notes, then add the `approved` label.
+Add it alongside the `submission` label; don't replace it. Publishing runs only when the issue has both, and otherwise the workflow is silently skipped.
+If `submission` was removed, add it back first, then remove and re-add `approved`.
 Only users with write access can approve; the workflow checks this.
 The entry is re-scored, committed under `submissions/issue-<n>/`, and the issue is closed.
 
-**Fixing a submission:** ask the submitter to edit the issue, then remove and re-add the `approved` label.
+**Fixing a submission:** ask the submitter to edit the issue, then remove and re-add the `approved` label, keeping `submission` on the issue.
 The entry is re-scored and its folder overwritten.
 
 **Removing a submission:** each entry is one folder under `submissions/`: community entries are `issue-<number>`, BDRC reference runs are `bdrc-<run_id>`.
