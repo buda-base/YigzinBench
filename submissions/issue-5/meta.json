@@ -1,0 +1,14 @@
+{
+  "model": "Opus (GEPA optimized prompt)",
+  "team": "webuddhist",
+  "training": "off-the-shelf",
+  "open_weights": false,
+  "model_url": "",
+  "paper_url": "",
+  "notes": "",
+  "source": "community",
+  "submitted_by": "kaldan007",
+  "submitted_at": "2026-11-19T06:26:11Z",
+  "issue_url": "https://github.com/buda-base/YigzinBench/issues/5",
+  "predictions_url": ""
+}
