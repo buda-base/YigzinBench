@@ -27,18 +27,80 @@ jobs:
           cache-dependency-path: scorer/requirements.txt
       - run: pip install -r scorer/requirements.txt
 
+      # Fetch existing bot score comments so we can edit the reply in place.
+      # Done before scoring so a crash still knows which comment to update.
+      - name: Fetch bot comments
+        id: comments
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh api --paginate --slurp \
+            "repos/$GITHUB_REPOSITORY/issues/$ISSUE_NUMBER/comments" \
+            | jq '[.[][] | select(.user.login == "github-actions[bot]") | {id, body, updated_at}]' \
+            > "$RUNNER_TEMP/bot_comments.json"
+          python - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          MARKER = re.compile(
+              r"^<!-- yigzinbench:score v=1 verdict=(ok|error) sha256=([0-9a-f]{64}|-) scored_at=(\S+) -->$"
+          )
+          comments = json.loads(Path(os.environ["RUNNER_TEMP"], "bot_comments.json").read_text())
+          best = None
+          for c in comments:
+              body = c.get("body") or ""
+              first = body.splitlines()[0] if body else ""
+              if not MARKER.match(first):
+                  continue
+              if best is None or c.get("updated_at", "") > best.get("updated_at", ""):
+                  best = c
+          cid = best["id"] if best else ""
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"comment_id={cid}\n")
+          PY
+
       # Issue text reaches the script only through env vars, never the shell.
       - name: Score
+        id: score
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
           ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
+          BOT_COMMENTS_FILE: ${{ runner.temp }}/bot_comments.json
         run: python -m tools.submission score --comment "$RUNNER_TEMP/comment.md"
 
       - name: Reply
+        if: ${{ always() && !cancelled() }}
         env:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+          COMMENT_ID: ${{ steps.score.outputs.comment_id || steps.comments.outputs.comment_id }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          if [ ! -f "$RUNNER_TEMP/comment.md" ]; then
+            cat > "$RUNNER_TEMP/comment.md" <<EOF
+          Scoring failed because of a problem on our side, not your file. A maintainer can re-run the job; editing the issue also scores it again.
+
+          <sub>[workflow run]($RUN_URL)</sub>
+          EOF
+          fi
+          if [ -n "$COMMENT_ID" ]; then
+            gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$COMMENT_ID" \
+              -F body=@"$RUNNER_TEMP/comment.md"
+          else
+            gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$RUNNER_TEMP/comment.md"
+          fi
+
+      - name: Summary
+        if: ${{ always() && !cancelled() }}
+        env:
+          VERDICT: ${{ steps.score.outputs.verdict }}
+          SHA: ${{ steps.score.outputs.sha256 }}
+        run: |
+          {
+            echo "### Score"
+            echo "- verdict: \`${VERDICT:-unknown}\`"
+            echo "- sha256: \`${SHA:--}\`"
+          } >> "$GITHUB_STEP_SUMMARY"

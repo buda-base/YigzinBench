@@ -39,9 +39,9 @@ Top 10 of 47 models. [See the full leaderboard](https://buda-base.github.io/Yigz
    pip install -r scorer/requirements.txt
    python -m scorer.score predictions.csv
    ```
-4. **[Open a submission issue](https://github.com/buda-base/YigzinBench/issues/new?template=submission.yml)**: fill in the model name, team and links, and drag the CSV into the form.
-   Within a few minutes a bot replies with your CER and a per-category breakdown.
-   Editing the issue re-scores it. A maintainer then approves it and it appears on the leaderboard.
+4. **[Open a submission issue](https://github.com/buda-base/YigzinBench/issues/new?template=submission.yml)**: fill in the model name, team and links, and drag the CSV into the form (or paste a Hugging Face `/resolve/` or `/blob/` link, or a raw gist URL).
+   Within a few minutes a bot replies with your CER, coverage, where the score would rank, and how many pages match exactly.
+   Editing the issue re-scores it. A maintainer publishes it by closing the issue as completed.
 
 ## How scoring works
 
@@ -58,27 +58,30 @@ The ground truth and page metadata are vendored in [`scorer/data/`](scorer/data)
 ## How it works
 
 ```
-issue form ──► score-submission.yml ──► bot comment with CER          (anyone)
+issue form ──► score-submission.yml ──► bot reply with CER + hash marker   (anyone)
    │
-   └─ label "approved" ──► publish-submission.yml                     (maintainers)
-      (keep "submission")
+   └─ Close as completed ──► publish-submission.yml                        (maintainers)
+                              ├─ hash check against the score reply
                               ├─ submissions/issue-<n>/{predictions.csv,meta.json,result.json}
                               ├─ leaderboard/leaderboard.json
-                              └─ commit ──► deploy-pages.yml ──► GitHub Pages
+                              └─ apply-and-push.sh ──► deploy-pages.yml ──► GitHub Pages
+
+Actions tab ──► delete-submission.yml ──► remove folder + _removed.json   (maintainers)
 ```
 
 | Path | What it is |
 |---|---|
 | `scorer/` | Validation and CER scoring (`python -m scorer.score`), plus the vendored ground truth |
-| `tools/submission.py` | Parses the issue form, downloads the CSV, scores it, and writes the reply |
+| `tools/submission.py` | Parses the issue form, scores or publishes, writes the marked reply |
+| `tools/manage.py` | Deletes a published entry and records it in `_removed.json` |
 | `tools/build_leaderboard.py` | Rebuilds `leaderboard.json` from `submissions/` (`--rescore` re-scores all) |
-| `tools/import_bdrc_runs.py` | Seeds the board with BDRC's reference runs (best run per model, linked from Hugging Face) |
+| `tools/import_bdrc_runs.py` | Seeds the board with BDRC's reference runs (skips ids in `_removed.json`) |
 | `tools/sync_dataset.py` | Pulls a new dataset revision into `scorer/data/` |
 | `submissions/` | One folder per leaderboard entry; this folder is the source of truth |
 | `site/` | The static leaderboard page (vanilla HTML/CSS/JS) |
-| `.github/` | The issue form and the workflows |
+| `.github/` | The issue form, workflows, and `scripts/apply-and-push.sh` |
 
-Prediction files are downloaded only from GitHub issue attachments, Hugging Face `/resolve/` URLs, or raw gists, up to 20 MB.
+Prediction files are downloaded only from GitHub issue attachments, Hugging Face `/resolve/` or `/blob/` URLs, or raw gists, up to 20 MB.
 Issue text reaches Python through environment variables and is never interpolated into a shell command.
 
 ## Maintainer guide
@@ -87,38 +90,32 @@ Issue text reaches Python through environment variables and is never interpolate
 
 1. *Settings → Pages → Build and deployment → Source:* **GitHub Actions**.
 2. *Settings → Actions → General → Workflow permissions:* allow **read and write**. The workflows request only what they need.
-3. Create the two labels:
+3. Create the submission label (the issue form adds it automatically):
    ```bash
    gh label create submission --color 0E8A16 --description "Leaderboard submission"
-   gh label create approved --color FBCA04 --description "Publish to the leaderboard"
    ```
+   The old `approved` label is unused; after deploying this flow, remove it with `gh label delete approved --yes`.
 4. If `main` has branch protection, allow GitHub Actions to push to it, or publishing can't commit.
 
-**Approving a submission:** read the bot's score, check the model link and notes, then add the `approved` label.
-Add it alongside the `submission` label; don't replace it. Publishing runs only when the issue has both, and otherwise the workflow is silently skipped.
-If `submission` was removed, add it back first, then remove and re-add `approved`.
-Only users with write access can approve; the workflow checks this.
-The entry is re-scored, committed under `submissions/issue-<n>/`, and the issue is closed.
+**Review queue:** `is:open label:submission`.
 
-**Fixing a submission:** ask the submitter to edit the issue, then remove and re-add the `approved` label, keeping `submission` on the issue.
-The entry is re-scored and its folder overwritten.
+| Action | How |
+|---|---|
+| Publish | Read the bot reply (check it just before closing), then **Close issue** (completed). |
+| Reject | Write the reason, then **Close as not planned**. The bot does nothing. |
+| Retry after a refusal | The bot reopens the issue; fix what it asked for, then Close as completed again. |
+| Delete a published entry | Actions → **Delete submission** with the entry id (`issue-<n>` or `bdrc-<run_id>`) and a reason. |
+| Undo a delete (`issue-*`) | Reopen the issue and Close as completed (publishes again and drops the removed record). |
+| Undo a delete (`bdrc-*`) | Restore the folder locally, remove its `_removed.json` record, rebuild, and push. |
+| Update a published entry | Ask for a new submission issue; publish it, then delete the old entry. |
 
-**Removing a submission:** each entry is one folder under `submissions/`: community entries are `issue-<number>`, BDRC reference runs are `bdrc-<run_id>`.
-To find a folder by model name:
-```bash
-grep -l '"model": "Yigdzin-v1"' submissions/*/meta.json
-```
-Then delete it, rebuild `leaderboard/leaderboard.json` and the README table, and push to `main`. The site redeploys automatically.
-```bash
-pip install -r scorer/requirements.txt   # once
-git rm -r submissions/issue-12
-python -m tools.build_leaderboard
-git commit -am "Remove submission #12" && git push
-```
-Leave a comment on the original issue so the submitter knows why the entry is gone.
+Only users with write access can publish; a submitter closing their own issue gets "Closed by the submitter; nothing was published."
+Publishing re-downloads the file and refuses if its SHA-256 no longer matches the score reply (ask for a pinned Hugging Face commit or gist revision, then edit the issue).
+
+**Failed score:** re-run the score job, or edit the issue. After a release, prefer editing so the new workflow file is used.
 
 **A word on trust:** the ground truth is public, so a submission could be faked.
-Approval is the safeguard: look for a model or code link and plausible per-category results.
+Maintainer review, backed by the hash check, is the safeguard: look for a model or code link and plausible per-category results.
 
 **When BDRC updates the dataset:**
 ```bash
@@ -134,6 +131,34 @@ Until you do, entries scored on the old revision are tagged "older version" on t
 ```bash
 mkdir -p _site && cp -r site/. _site/ && cp leaderboard/leaderboard.json _site/ && python -m http.server -d _site 8000
 ```
+
+## Subdirectories & System Boundaries
+
+The folders with code each have a contract file listing their interface, invariants and side effects.
+
+- `scorer/`: [scorer/README.md](scorer/README.md) - parses and validates a predictions CSV and computes CER against the vendored ground truth. No network access.
+- `tools/`: [tools/README.md](tools/README.md) - the issue-form, download, leaderboard-build, BDRC-import and dataset-sync CLIs that the workflows call. Imports `scorer.score`.
+- `site/`: [site/README.md](site/README.md) - the static page that renders `leaderboard.json`. It reads data only and never writes to the repo.
+- `submissions/`, `leaderboard/`, `scorer/data/`: data only, written by `tools/` (see its contract).
+- `tests/`: unit tests for the scorer.
+
+## Global Invariants
+
+- `submissions/<id>/` is the source of truth; `leaderboard/leaderboard.json` and the table above are derived from it by `python -m tools.build_leaderboard` and must not be edited by hand.
+- `leaderboard.json` entries are sorted by ascending mean CER, ties to the earlier submission. The site takes the first entry as the best model.
+- Changing the CER logic in `scorer/cer.py` requires bumping `SCORER_VERSION` in `scorer/score.py` and re-scoring every submission; entries scored on another scorer version or dataset revision are marked stale.
+- Predictions are downloaded only from GitHub issue attachments, Hugging Face `/resolve/` or `/blob/` URLs or raw gists, up to 20 MiB (`tools/fetch.py`).
+- `tools/build_leaderboard.py` rewrites only the text between the two leaderboard comment markers in this file; keep both markers.
+
+## Global Side Effects
+
+- Network: Hugging Face (dataset sync, BDRC run import, prediction downloads), GitHub and gist downloads, and Google Fonts on the site.
+- Files: the tools write `submissions/`, `leaderboard/leaderboard.json`, this README's table and `scorer/data/`.
+- Git commits, issue comments and Pages deploys are done by the workflows in `.github/workflows/`, not by the Python code.
+
+## System Verification
+
+- Run: `python -m unittest discover -s tests -t .`
 
 ## License
 

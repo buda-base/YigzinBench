@@ -113,6 +113,9 @@
     const url = safeUrl(e.model_url) || safeUrl(e.paper_url) || safeUrl(e.issue_url);
     td.append(url ? el("a", { class: "model__name", href: url, rel: "noopener" }, e.model) : el("span", { class: "model__name" }, e.model));
     if (e.stale) td.append(el("span", { class: "tag", title: "Scored on an older version of the dataset" }, "older version"));
+    if (e.coverage < e.n) {
+      td.append(el("span", { class: "tag", title: "Predictions cover fewer than all benchmark pages" }, `partial (${e.coverage}/${e.n})`));
+    }
     td.append(el("span", { class: "model__team" }, e.team));
     return td;
   }

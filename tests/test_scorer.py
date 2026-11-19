@@ -110,6 +110,10 @@ class IssueFormTest(unittest.TestCase):
         self.assertTrue(is_allowed("https://gist.githubusercontent.com/u/0abc/raw/p.csv"))
         self.assertFalse(is_allowed("https://evil.example/p.csv"))
         self.assertFalse(is_allowed("https://github.com/user-attachments/files/1/p.csv?x=http://a"))
+        self.assertEqual(
+            find_url("https://huggingface.co/org/m/blob/main/p.csv"),
+            "https://huggingface.co/org/m/resolve/main/p.csv",
+        )
         with self.assertRaises(SubmissionError):
             find_url("see http://example.com/p.csv")
 

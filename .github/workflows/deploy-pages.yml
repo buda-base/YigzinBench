@@ -1,14 +1,13 @@
 name: Deploy site
 
-# Commits pushed by other workflows don't trigger `push`, so this also runs
-# after the publish and re-score workflows finish.
+# Human pushes to site/** and leaderboard/** deploy through the push trigger.
+# Bot commits (publish, re-score, delete) start this workflow through
+# apply-and-push.sh (`workflow_dispatch`), because pushes made with
+# GITHUB_TOKEN start no workflow.
 on:
   push:
     branches: [main]
     paths: ["site/**", "leaderboard/**", ".github/workflows/deploy-pages.yml"]
-  workflow_run:
-    workflows: ["Publish submission", "Re-score all submissions"]
-    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -22,7 +21,6 @@ concurrency:
 
 jobs:
   build:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5

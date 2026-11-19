@@ -16,7 +16,7 @@ import re
 import sys
 
 from scorer.score import load_reference, score_bytes
-from tools.build_leaderboard import SUBMISSIONS, build
+from tools.build_leaderboard import SUBMISSIONS, build, removed_ids
 from tools.fetch import download
 
 csv.field_size_limit(sys.maxsize)
@@ -40,14 +40,26 @@ def main() -> int:
     rev = source["revision"]
     catalog = {r["run_id"]: r for r in read_csv(hf_url(rev, "runs/catalog.csv"))}
     summary = read_csv(hf_url(rev, "runs/cer_summary.csv"))
+    gone = removed_ids()
+
+    # Drop removed runs before picking the best per (engine, model), so the
+    # next-best run can take a removed run's place and is never downloaded.
+    kept_summary = []
+    for row in summary:
+        entry_id = f"bdrc-{row['run_id']}"
+        if entry_id in gone:
+            print(f"skipped (removed): {entry_id}", file=sys.stderr)
+            continue
+        kept_summary.append(row)
 
     best: dict[tuple[str, str], dict] = {}
-    for row in summary:
+    for row in kept_summary:
         key = (row["engine"], row["model"])
         if key not in best or float(row["mean_cer"]) < float(best[key]["mean_cer"]):
             best[key] = row
 
     mismatches = 0
+    imported = 0
     for (engine, model), row in sorted(best.items(), key=lambda kv: float(kv[1]["mean_cer"])):
         run_id = row["run_id"]
         url = hf_url(rev, f"runs/predictions/{run_id}.csv")
@@ -76,9 +88,10 @@ def main() -> int:
         folder.mkdir(parents=True, exist_ok=True)
         (folder / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         (folder / "result.json").write_text(json.dumps(result, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        imported += 1
 
     board = build()
-    print(f"imported {len(best)} runs; leaderboard has {len(board['entries'])} entries; {mismatches} mismatches")
+    print(f"imported {imported} runs; leaderboard has {len(board['entries'])} entries; {mismatches} mismatches")
     return 1 if mismatches else 0
 
 
