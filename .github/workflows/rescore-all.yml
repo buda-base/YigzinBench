@@ -6,9 +6,10 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
-  group: publish
+  group: rescore
   cancel-in-progress: false
 
 jobs:
@@ -23,12 +24,18 @@ jobs:
           cache: pip
           cache-dependency-path: scorer/requirements.txt
       - run: pip install -r scorer/requirements.txt
-      - run: python -m tools.build_leaderboard --rescore
-      - name: Commit
+      - name: Re-score and push
+        id: apply
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add submissions leaderboard README.md
-          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "Re-score all submissions"
-          git push
+          bash .github/scripts/apply-and-push.sh \
+            "Re-score all submissions" \
+            -- python -m tools.build_leaderboard --rescore
+      - name: Summary
+        if: always()
+        env:
+          RESULT: ${{ steps.apply.outputs.result }}
+        run: |
+          echo "### Re-score" >> "$GITHUB_STEP_SUMMARY"
+          echo "- result: \`${RESULT:-n/a}\`" >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,73 @@
+name: Delete submission
+
+# Remove a published entry (issue-* or bdrc-*) from the Actions tab.
+# Records the id in submissions/_removed.json so BDRC imports do not bring it back.
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "Entry id (issue-<n> or bdrc-<run_id>)"
+        required: true
+        type: string
+      reason:
+        description: "Why this entry is being removed"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  delete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scorer/requirements.txt
+      - run: pip install -r scorer/requirements.txt
+
+      - name: Delete
+        id: apply
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ENTRY_ID: ${{ inputs.id }}
+          REASON: ${{ inputs.reason }}
+          ACTOR: ${{ github.actor }}
+        run: |
+          ISSUE_ARG=()
+          if [[ "$ENTRY_ID" =~ ^issue-([0-9]+)$ ]]; then
+            ISSUE_ARG=(--issue "${BASH_REMATCH[1]}")
+          fi
+          bash .github/scripts/apply-and-push.sh \
+            "Delete $ENTRY_ID (requested by $ACTOR)" \
+            -- python -m tools.manage delete "$ENTRY_ID" --reason "$REASON" "${ISSUE_ARG[@]}"
+
+      - name: Summary
+        if: always()
+        env:
+          ENTRY_ID: ${{ inputs.id }}
+          REASON: ${{ inputs.reason }}
+          RESULT: ${{ steps.apply.outputs.result }}
+          MODEL: ${{ steps.apply.outputs.model }}
+          MESSAGE: ${{ steps.apply.outputs.message }}
+        run: |
+          {
+            echo "### Delete"
+            echo "- id: \`$ENTRY_ID\`"
+            echo "- model: \`${MODEL:-}\`"
+            echo "- reason: $REASON"
+            echo "- result: \`${RESULT:-n/a}\`"
+            if [ -n "${MESSAGE:-}" ]; then
+              echo "- message: $MESSAGE"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$RESULT" = "refused" ]; then
+            echo "::error::${MESSAGE:-delete refused}"
+            exit 1
+          fi
+

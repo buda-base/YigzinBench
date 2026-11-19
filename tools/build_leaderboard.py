@@ -34,6 +34,15 @@ def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def removed_ids() -> set[str]:
+    """Return entry ids listed in submissions/_removed.json (empty if missing)."""
+    path = SUBMISSIONS / "_removed.json"
+    if not path.exists():
+        return set()
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {r["id"] for r in data.get("removed", []) if r.get("id")}
+
+
 def rescore(folder: Path) -> None:
     from tools.fetch import download
 
